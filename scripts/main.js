@@ -820,3 +820,210 @@ window.updateGameLaunchStatus = updateGameLaunchStatus;
 window.hideGameLaunchOverlay = hideGameLaunchOverlay;
 window.isGameLaunchCancelled = isGameLaunchCancelled;
 window.autoHideGameLaunchOverlay = autoHideGameLaunchOverlay;
+
+
+// ============================================
+// Party Game Launch Toast Notification
+// ============================================
+
+/**
+ * Show a toast notification for party game launches
+ * @param {Object} data - Game launch data { gameName, gameThumbnail, countdown, placeId }
+ */
+function showPartyGameLaunchToast(data) {
+    // Remove any existing toast
+    const existingToast = document.getElementById('party-game-toast');
+    if (existingToast) {
+        existingToast.remove();
+    }
+    
+    const toast = document.createElement('div');
+    toast.id = 'party-game-toast';
+    toast.className = 'party-game-toast';
+    
+    const thumbnailHtml = data.gameThumbnail 
+        ? `<img src="${data.gameThumbnail}" alt="${data.gameName}" class="toast-game-icon" onerror="this.style.display='none'">`
+        : '<div class="toast-game-icon-placeholder"></div>';
+    
+    toast.innerHTML = `
+        <div class="toast-content">
+            ${thumbnailHtml}
+            <div class="toast-text">
+                <div class="toast-title">Party Game Launch</div>
+                <div class="toast-game-name">${data.gameName || 'Unknown Game'}</div>
+                <div class="toast-countdown">Launching in <span id="toast-countdown-num">${data.countdown || 5}</span>s...</div>
+            </div>
+        </div>
+    `;
+    
+    // Add styles if not already present
+    if (!document.getElementById('party-toast-styles')) {
+        const style = document.createElement('style');
+        style.id = 'party-toast-styles';
+        style.textContent = `
+            .party-game-toast {
+                position: fixed;
+                top: 80px;
+                right: 20px;
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                border: 1px solid #00a2ff;
+                border-radius: 8px;
+                padding: 16px;
+                z-index: 100000;
+                box-shadow: 0 4px 20px rgba(0, 162, 255, 0.3);
+                animation: toast-slide-in 0.3s ease-out;
+                max-width: 320px;
+            }
+            
+            @keyframes toast-slide-in {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            .party-game-toast .toast-content {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .party-game-toast .toast-game-icon {
+                width: 64px;
+                height: 64px;
+                border-radius: 6px;
+                object-fit: cover;
+                flex-shrink: 0;
+            }
+            
+            .party-game-toast .toast-game-icon-placeholder {
+                width: 64px;
+                height: 64px;
+                border-radius: 6px;
+                background: #2a2a4a;
+                flex-shrink: 0;
+            }
+            
+            .party-game-toast .toast-text {
+                flex: 1;
+                min-width: 0;
+            }
+            
+            .party-game-toast .toast-title {
+                font-size: 12px;
+                color: #00a2ff;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 4px;
+            }
+            
+            .party-game-toast .toast-game-name {
+                font-size: 16px;
+                color: #fff;
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 4px;
+            }
+            
+            .party-game-toast .toast-countdown {
+                font-size: 14px;
+                color: #aaa;
+            }
+            
+            .party-game-toast .toast-countdown span {
+                color: #00a2ff;
+                font-weight: 600;
+            }
+            
+            .party-game-toast.toast-fade-out {
+                animation: toast-fade-out 0.3s ease-in forwards;
+            }
+            
+            @keyframes toast-fade-out {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(toast);
+    
+    // Countdown timer
+    let countdown = data.countdown || 5;
+    const countdownEl = document.getElementById('toast-countdown-num');
+    
+    const countdownInterval = setInterval(() => {
+        countdown--;
+        if (countdownEl) {
+            countdownEl.textContent = countdown;
+        }
+        
+        if (countdown <= 0) {
+            clearInterval(countdownInterval);
+            toast.classList.add('toast-fade-out');
+            setTimeout(() => {
+                toast.remove();
+            }, 300);
+        }
+    }, 1000);
+    
+    // Store interval for cleanup
+    toast.dataset.intervalId = countdownInterval;
+}
+
+/**
+ * Initialize party event listeners for themes
+ */
+function initPartyListeners() {
+    if (window.roblox?.party?.onGameLaunching) {
+        const cleanup = window.roblox.party.onGameLaunching((data) => {
+            console.log('[2016 Theme] Party game launching:', data);
+            showPartyGameLaunchToast(data);
+            
+            // Also launch the game after countdown
+            if (data.placeId) {
+                setTimeout(() => {
+                    if (window.roblox?.launchGameDirect) {
+                        window.roblox.launchGameDirect(data.placeId, data.gameName, data.gameThumbnail);
+                    } else if (window.robloxAPI?.launchGameDirect) {
+                        window.robloxAPI.launchGameDirect(data.placeId, data.gameName, data.gameThumbnail);
+                    }
+                }, (data.countdown || 5) * 1000);
+            }
+        });
+        
+        // Store cleanup function for later
+        window._partyCleanup = cleanup;
+    }
+}
+
+// Initialize party listeners when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPartyListeners);
+} else {
+    initPartyListeners();
+}
+
+// Cleanup on page unload
+window.addEventListener('beforeunload', () => {
+    if (window._partyCleanup) {
+        window._partyCleanup();
+    }
+});
+
+// Export for external use
+window.showPartyGameLaunchToast = showPartyGameLaunchToast;
