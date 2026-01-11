@@ -6,7 +6,7 @@
   "author": "shpeelock",
   "entry": "index.html",
   "era": "2016",
-  "preview": "preview.png",
+  "preview": "https://raw.githubusercontent.com/shpeelock/rovloo-2016/refs/heads/master/preview.png",
   "supports": {
     "seasonal": ["default"]
   }
