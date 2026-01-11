@@ -213,6 +213,26 @@
                 }
             });
         }
+
+        const btnBack = document.getElementById('btn-back');
+        const btnForward = document.getElementById('btn-forward');
+
+        if (btnBack) {
+            btnBack.addEventListener('click', function() {
+                window.history.back();
+            });
+        }
+
+        if (btnForward) {
+            btnForward.addEventListener('click', function() {
+                window.history.forward();
+            });
+        }
+
+        // Update button states based on history
+        updateNavigationButtonStates();
+        window.addEventListener('load', updateNavigationButtonStates);
+        window.addEventListener('popstate', updateNavigationButtonStates);
     }
 
     function applyNavbarSettings() {
@@ -448,5 +468,34 @@
         }
         return num.toLocaleString();
     }
+
+    function updateNavigationButtonStates() {
+        const btnBack = document.getElementById('btn-back');
+        const btnForward = document.getElementById('btn-forward');
+
+        if (btnBack) {
+            // Note: We can't directly check history length, so we'll enable by default
+            // and let the browser handle disabled state
+            btnBack.disabled = false;
+        }
+
+        if (btnForward) {
+            btnForward.disabled = false;
+        }
+    }
+
+    // Keyboard shortcuts for navigation
+    document.addEventListener('keydown', function(e) {
+        // Alt+Left for back
+        if (e.altKey && e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.history.back();
+        }
+        // Alt+Right for forward
+        if (e.altKey && e.key === 'ArrowRight') {
+            e.preventDefault();
+            window.history.forward();
+        }
+    });
 })();
 
