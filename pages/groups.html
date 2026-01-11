@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <title id="page-title">Group - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ROBLOX Corporation"/>
+
+    <link href="../images/favicon.ico" rel="icon"/>
+
+    
+    <link rel="stylesheet" href="../CSS/cssfamily.css"/>
+    <link rel="stylesheet" href="../CSS/fetch1.css"/>
+    <link rel="stylesheet" href="../CSS/fetch2.css"/>
+    <link rel="stylesheet" href="../CSS/fetch3.css"/>
+    <link rel="stylesheet" href="../CSS/fetch4.css"/>
+    
+    <link rel="stylesheet" href="../CSS/fetch7.css"/>
+    <link rel="stylesheet" href="../CSS/fetch12.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dark-theme.css"/>
+</head>
+<body id="rbx-body" class="light-theme" data-performance-relative-value="0.5" data-internal-page-name="Groups">
+    <div id="roblox-linkify" data-enabled="true" data-regex="(https?\:\/\/)?(?:www\.)?([a-z0-9\-]{2,}\.)*(((m|de|www|web|api|blog|wiki|help|corp|polls|bloxcon|developer|devforum|forum)\.roblox\.com|robloxlabs\.com)|(www\.shoproblox\.com))((\/[A-Za-z0-9-+&amp;@#\/%?=~_|!:,.;]*)|(\b|\s))" data-regex-flags="gm"></div>
+
+    <div class="nav-container no-gutter-ads">
+        
+
+        <div id="navContent" class="nav-content">
+            <div id="MasterContainer">
+                <div id="BodyWrapper">
+                    <div id="RepositionBody">
+                        <div id="Body">
+
+                            
+                            <div id="SearchControls">
+                                <div class="content">
+                                    <input type="text" id="GroupSearchKeyword" class="SearchKeyword default translate" maxlength="100" value="Search all groups" onclick="if(this.value == 'Search all groups'){ this.value = '';this.classList.remove('default');}" />
+                                    <input type="submit" id="GroupSearchButton" value="Search" class="group-search-button translate" onclick="searchGroups(); return false;" />
+                                </div>
+                            </div>
+
+                            <div class="MyRobloxContainer">
+                                
+                                <div id="left-column" class="GroupListContainer">
+                                    <div id="GroupThumbnails">
+                                        
+                                        <div id="groups-scroll-up" class="GroupScrollArrow scroll-up">
+                                            <span class="arrow-up"></span>
+                                        </div>
+                                        
+                                        <div id="my-groups-list" class="GroupsList">
+                                            
+                                            <div class="groups-loading">Loading groups...</div>
+                                        </div>
+                                        
+                                        <div id="groups-scroll-down" class="GroupScrollArrow scroll-down">
+                                            <span class="arrow-down"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="mid-column" class="GroupsPage">
+
+                                    
+                                    <div class="GroupPanelContainer">
+                                        <div class="left-col">
+                                            <div class="GroupThumbnail">
+                                                <img id="group-thumbnail" src="../images/avatar-placeholder.png" alt="Group" height="150" width="150"/>
+                                            </div>
+                                            <div class="GroupOwner">
+                                                Owned By:<br/>
+                                                <a id="group-owner-link" href="#">Loading...</a>
+                                            </div>
+                                            <div id="MemberCount">Members: <span id="group-member-count">0</span></div>
+                                            <div id="group-join-btn" class="btn-neutral btn-large" style="margin-top: 10px;">Join Group</div>
+                                        </div>
+
+                                        <div class="right-col">
+                                            <h2 id="group-name" class="notranslate">Loading...</h2>
+                                            
+                                            <div id="group-shout-container" class="GroupStatusDiv" style="display:none;">
+                                                <div class="GroupStatus">
+                                                    <span class="GroupStatusLabel">Group Status: </span>
+                                                    <span id="group-shout-text" class="GroupStatusText linkify"></span>
+                                                </div>
+                                            </div>
+                                            <div id="GroupDescP" class="linkify">
+                                                <pre id="group-description" class="notranslate">Loading description...</pre>
+                                            </div>
+                                            <div class="ReportAbuse">
+                                                <span class="AbuseButton"><a>Report Abuse</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div id="GroupsPeopleContainer">
+                                        <div>
+                                            <div id="GroupsPeople_Games" class="tab active" data-tab="games">Games</div>
+                                            <div id="GroupsPeople_Members" class="tab" data-tab="members">Members</div>
+                                            <div id="GroupsPeople_Allies" class="tab" data-tab="allies">Allies</div>
+                                            <div id="GroupsPeople_Enemies" class="tab" data-tab="enemies">Enemies</div>
+                                            <div id="GroupsPeople_Items" class="tab" data-tab="store">Store</div>
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                        <div id="GroupsPeople_Pane">
+                                            
+                                            <div id="GroupsPeoplePane_Games" class="tab-content" style="display:block;">
+                                                <div id="games-list" class="results-container">
+                                                    <div class="loading-spinner"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="GroupsPeoplePane_Members" class="tab-content" style="display:none;">
+                                                <div id="members-role-filter" class="role-filter-container" style="padding:10px;">
+                                                    <select id="role-select" class="input-field">
+                                                        <option value="">All Roles</option>
+                                                    </select>
+                                                </div>
+                                                <div id="members-list" class="GroupMembers">
+                                                    <div class="loading-spinner""></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="GroupsPeoplePane_Allies" class="tab-content" style="display:none;">
+                                                <div id="allies-list" class="results-container">
+                                                    <div class="loading-spinner"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="GroupsPeoplePane_Enemies" class="tab-content" style="display:none;">
+                                                <div id="enemies-list" class="results-container">
+                                                    <div class="loading-spinner"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="GroupsPeoplePane_Items" class="tab-content" style="display:none;">
+                                                <div id="store-list" class="results-container">
+                                                    <div class="loading-spinner">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div id="GroupWallPane_Wall">
+                                        <div class="GroupWallHeader">
+                                            <span>Wall</span>
+                                        </div>
+                                        <div class="GroupWallPane">
+                                            
+                                            <div id="wall-post-form" class="wall-post-form" style="display:none;">
+                                                <textarea id="wall-post-input" placeholder="Write something..."></textarea>
+                                                <button id="wall-post-btn" class="btn-neutral btn-small">Post</button>
+                                            </div>
+                                            
+                                            <div id="wall-posts-container">
+                                                <div style="text-align:center; padding:20px;">Loading wall posts...</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="wall-pagination" class="FooterPager"></div>
+                                    </div>
+
+                                </div> 
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+                <footer class="container-footer">
+                    <div class="footer">
+                        <ul class="row footer-links">
+                            <li class="col-xs-4 col-sm-2 footer-link"><a href="http://corp.roblox.com/">About Us</a></li>
+                            <li class="col-xs-4 col-sm-2 footer-link"><a href="http://corp.roblox.com/jobs">Jobs</a></li>
+                            <li class="col-xs-4 col-sm-2 footer-link"><a href="http://blog.roblox.com/">Blog</a></li>
+                            <li class="col-xs-4 col-sm-2 footer-link"><a href="/Info/Privacy.aspx">Privacy</a></li>
+                            <li class="col-xs-4 col-sm-2 footer-link"><a href="http://en.help.roblox.com/">Help</a></li>
+                        </ul>
+                        <p class="footer-note">
+                            ROBLOX, "Online Building Toy", characters, logos, names, and all related indicia are trademarks of ROBLOX Corporation, ©2016.
+                        </p>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="../JS/navbar.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/pages/groups.js"></script>
+    <script>
+        // Group search function
+        function searchGroups() {
+            const keyword = document.getElementById('GroupSearchKeyword').value;
+            if (keyword && keyword !== 'Search all groups') {
+                window.location.href = 'people.html?q=' + encodeURIComponent(keyword) + '&type=groups';
+            }
+        }
+        
+        // Handle Enter key in search
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('GroupSearchKeyword');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        searchGroups();
+                    }
+                });
+            }
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const groupId = urlParams.get('groupId') || urlParams.get('gid');
+            
+            if (window.GroupsPageRenderer) {
+                const renderer = new GroupsPageRenderer();
+                renderer.init(groupId);
+            }
+        });
+    </script>
+</body>
+</html>
+

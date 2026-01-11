@@ -1,0 +1,171 @@
+
+<div id="titlebar">
+    <div class="titlebar-drag">
+        <span class="titlebar-title">Rovloo</span>
+    </div>
+    <div class="titlebar-controls">
+        <button id="btn-minimize" class="titlebar-btn">─</button>
+        <button id="btn-maximize" class="titlebar-btn">□</button>
+        <button id="btn-close" class="titlebar-btn btn-close">✕</button>
+    </div>
+</div>
+
+
+<div id="header" class="navbar-fixed-top rbx-header" role="navigation">
+    <div class="container-fluid">
+        <div class="rbx-navbar-header">
+            
+            <button type="button" class="navbar-toggle">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0" width="20" height="2" fill="white"/>
+                    <rect y="7" width="20" height="2" fill="white"/>
+                    <rect y="14" width="20" height="2" fill="white"/>
+                </svg>
+            </button>
+
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" id="navbar-home-link">
+                    <span class="icon-logo"></span>
+                    <span class="icon-logo-r"></span>
+                </a>
+            </div>
+        </div>
+        <ul class="nav rbx-navbar col-md-4 col-lg-3">
+            <li>
+                <a class="nav-menu-title" id="nav-games-link">Games</a>
+            </li>
+            <li>
+                <a class="nav-menu-title" id="nav-catalog-link">Catalog</a>
+            </li>
+            <li>
+                <a class="nav-menu-title" id="nav-reviews-link">Reviews</a>
+            </li>
+            <li>
+                <a class="nav-menu-title" id="nav-settings-link">Settings</a>
+            </li>
+        </ul>
+        <div id="navbar-universal-search" class="navbar-left rbx-navbar-search col-md-3" role="search">
+            <div class="input-group">
+                <input id="navbar-search-input" class="form-control input-field" type="text" placeholder="Search" maxlength="120" autocomplete="off"/>
+                <div class="input-group-btn">
+                    <button id="navbar-search-btn" class="input-addon-btn" type="submit">
+                        <span class="icon-nav-search"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="navbar-search-dropdown" class="search-dropdown">
+                <a href="#" class="search-dropdown-item" data-search-type="people">
+                    <span class="search-action">Search</span>
+                    <span class="search-quote">"</span>
+                    <span class="search-query-text"></span>
+                    <span class="search-quote">"</span>
+                    <span class="search-type-label">in People</span>
+                </a>
+                <a href="#" class="search-dropdown-item" data-search-type="games">
+                    <span class="search-action">Search</span>
+                    <span class="search-quote">"</span>
+                    <span class="search-query-text"></span>
+                    <span class="search-quote">"</span>
+                    <span class="search-type-label">in Games</span>
+                </a>
+                <a href="#" class="search-dropdown-item" data-search-type="catalog">
+                    <span class="search-action">Search</span>
+                    <span class="search-quote">"</span>
+                    <span class="search-query-text"></span>
+                    <span class="search-quote">"</span>
+                    <span class="search-type-label">in Catalog</span>
+                </a>
+                <a href="#" class="search-dropdown-item" data-search-type="groups">
+                    <span class="search-action">Search</span>
+                    <span class="search-quote">"</span>
+                    <span class="search-query-text"></span>
+                    <span class="search-quote">"</span>
+                    <span class="search-type-label">in Groups</span>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-right rbx-navbar-right">
+            <ul class="nav navbar-right rbx-navbar-right-nav">
+                <li class="navbar-icon-item navbar-settings-item">
+                    <a class="rbx-menu-item" id="settings-btn" href="#settings">
+                        <span class="icon-nav-settings"></span>
+                    </a>
+                    
+                    <div class="settings-dropdown" id="settings-dropdown">
+                        <a href="#" id="logout-btn" class="dropdown-item">
+                            <span>Return to Hub</span>
+                        </a>
+                    </div>
+                </li>
+                        <li class="navbar-currency-item navbar-tix-item" id="navbar-tix-item">
+                          <a class="rbx-menu-item" href="#tix">
+                            <span class="icon-nav-tix"></span>
+                            <span class="currency-amount" id="navbar-tix-amount">0</span>
+                          </a>
+                          <div class="settings-dropdown" id="tix-dropdown" style="min-width: 140px; margin-top: 1px;">
+                            <div class="dropdown-item" style="cursor: default;">
+                               <span class="icon-nav-tix" style="margin-right: 6px;"></span>
+                               <span id="tix-dropdown-amount" style=" font-size: 16px;">0</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="navbar-currency-item navbar-robux-item" id="navbar-robux-item">
+                          <a class="rbx-menu-item" href="#robux">
+                            <span class="icon-nav-robux"></span>
+                            <span class="currency-amount" id="navbar-robux-amount">0</span>
+                          </a>
+                          <div class="settings-dropdown" id="robux-dropdown" style="min-width: 140px; margin-top: 1px;">
+                            <div class="dropdown-item" style="cursor: default;">
+                               <span class="icon-nav-robux" style="margin-right: 6px;"></span>
+                               <span id="robux-dropdown-amount" style="font-size: 16px;">0</span>
+                          </div>
+                        </li>            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="rbx-left-col" id="sidebar">
+    <div class="sidebar-header" id="sidebar-username">Guest</div>
+    <ul>
+        <li>
+            <a id="sidebar-home-link">
+                <span class="icon-nav-home"></span>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a id="sidebar-profile-link">
+                <span class="icon-nav-profile"></span>
+                <span>Profile</span>
+            </a>
+        </li>
+                <li>
+            <a id="sidebar-friends-link">
+                <span class="icon-nav-friends"></span>
+                <span>Friends</span>
+            </a>
+        </li>
+        <li>
+            <a id="sidebar-avatar-link">
+                <span class="icon-nav-charactercustomizer"></span>
+                <span>Character</span>
+            </a>
+        </li>
+        <li>
+            <a id="sidebar-inventory-link">
+                <span class="icon-nav-inventory"></span>
+                <span>Inventory</span>
+            </a>
+        </li>
+        <li>
+            <a id="sidebar-groups-link">
+                <span class="icon-nav-group"></span>
+                <span>Groups</span>
+            </a>
+        </li>
+    </ul>
+</div>
+

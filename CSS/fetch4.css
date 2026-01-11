@@ -1,0 +1,2008 @@
+
+div#simplemodal-container {
+    box-sizing: content-box;
+}
+
+@media(max-width: 480px) {
+    div#simplemodal-container {
+        height:auto;
+    }
+}
+
+.GenericModalButtonContainer .btn-large,.GenericModalButtonContainer .btn-medium,.GenericModalButtonContainer .btn-small {
+    margin: 0;
+    display: inline-block;
+    zoom:1;text-align: center;
+    font-weight: normal;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.GenericModalButtonContainer .btn-large {
+    padding: 9px 13px 0 13px;
+    height: 39px;
+    min-width: 70px;
+    font-size: 23px;
+    line-height: 27px;
+    background-position: left 0;
+}
+
+.GenericModalButtonContainer .btn-large:hover,.GenericModalButtonContainer .btn-medium:hover,.GenericModalButtonContainer .btn-small:hover {
+    text-decoration: none;
+}
+
+.GenericModalButtonContainer .btn-large:hover {
+    background-position: left -48px;
+}
+
+.GenericModalButtonContainer .btn-neutral,.GenericModalButtonContainer .btn-neutral:link,.GenericModalButtonContainer .btn-neutral:active,.GenericModalButtonContainer .btn-neutral:visited {
+    border-color: #0852b7;
+    background-color: #0852b7;
+    background-image: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/StyleGuide/bg-btn-blue.png);
+    color: white;
+}
+
+.GenericModalButtonContainer .btn-negative,.GenericModalButtonContainer .btn-negative:link,.GenericModalButtonContainer .btn-negative:active,.GenericModalButtonContainer .btn-negative:visited {
+    border-color: #565656;
+    background-color: #565656;
+    background-image: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray.png);
+    color: white;
+}
+
+.simplemodal-container,.simplemodal-container .ConfirmationModal,.simplemodal-container .GenericModalButtonContainer {
+    box-sizing: content-box;
+}
+
+.simplemodal-container .btn-primary,.simplemodal-container .btn-primary:link,.simplemodal-container .btn-primary:active,.simplemodal-container .btn-primary:visited {
+    border-color: #007001;
+    background-color: #007001;
+    background-image: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/StyleGuide/bg-btn-green.png)!important;
+    color: white;
+}
+
+.simplemodal-container .btn-negative,.simplemodal-container .btn-negative:link,.simplemodal-container .btn-negative:active,.simplemodal-container .btn-negative:visited {
+    border-color: #565656;
+    background-color: #565656;
+    background-image: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray.png);
+    color: white;
+}
+
+.simplemodal-container .btn-none {
+    display: none;
+}
+
+.simplemodal-container .btn-medium {
+    padding: 1px 13px 3px 13px;
+    height: 28px;
+    min-width: 62px;
+    font-size: 20px;
+    background-position: left -96px;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.simplemodal-container .btn-medium:hover {
+    background-position: left -128px;
+}
+
+.GenericModalButtonContainer .btn-primary,.GenericModalButtonContainer .btn-primary:link,.GenericModalButtonContainer .btn-primary:active,.GenericModalButtonContainer .btn-primary:visited {
+    border-color: #007001;
+    background-color: #007001;
+    background-image: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/StyleGuide/bg-btn-green.png)!important;
+    color: white;
+}
+
+.GenericModalButtonContainer .btn-negative,.GenericModalButtonContainer .btn-negative:link,.GenericModalButtonContainer .btn-negative:active,.GenericModalButtonContainer .btn-negative:visited {
+    border-color: #565656;
+    background-color: #565656;
+    background-image: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/StyleGuide/bg-btn-gray.png);
+    color: white;
+}
+
+.GenericModalButtonContainer .btn-none {
+    display: none;
+}
+
+.PurchaseModal .simplemodal-close a {
+    background: url('/web/20160216070651im_/http://www.roblox.com/images/Buttons/btn-x.png') no-repeat top left;
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 5px;
+}
+
+.PurchaseModal .simplemodal-close a:hover {
+    background-position: bottom left;
+    cursor: pointer;
+}
+
+.CustomizeCharacterLink {
+    display: block;
+    margin-top: 10px;
+}
+
+.PurchaseModalMessage.SuccessMsg {
+    padding: 30px 20px 20px 20px;
+    height: auto;
+}
+
+.PurchaseModal span.Robux,.PurchaseModal span.Tickets,.PurchaseModal span.Free {
+    margin-bottom: 2px;
+}
+
+.PurchaseModalClose {
+    cursor: pointer;
+    position: absolute;
+    right: -18px;
+    top: -18px;
+}
+
+.PurchaseModal {
+    width: 435px;
+    display: none;
+    position: absolute;
+    border: 2px solid #272727;
+    background-color: #E1E1E1;
+    padding: 5px;
+}
+
+.PurchaseModal .titleBar {
+    background-color: #E1E1E1;
+    font-weight: bold;
+    font-size: 27px;
+    letter-spacing: -1px;
+    color: #343434;
+    height: 38px;
+    text-align: center;
+}
+
+.PurchaseModalBody {
+    background-color: #fff;
+}
+
+.PurchaseModalMessage {
+    padding: 10px;
+    height: 110px;
+}
+
+.PurchaseModalMessageImage {
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+}
+
+.PurchaseModalMessageText {
+    display: inline-block;
+    width: 275px;
+    vertical-align: top;
+    padding-top: 28px;
+}
+
+.PurchaseModalButtonContainer {
+    clear: left;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.PurchaseModalFooter {
+    text-align: center;
+    margin: 10px auto 0;
+    padding-bottom: 5px;
+}
+
+.ProcessingModalBody {
+    margin: 15px auto;
+    text-align: center;
+    vertical-align: middle;
+    background: none;
+}
+
+.CurrencyColor1 {
+    color: #080;
+    padding-left: 20px;
+    background: url(/web/20160216070651im_/http://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -42px;
+}
+
+.CurrencyColor2 {
+    color: #A61;
+    padding-left: 20px;
+    background: url(/web/20160216070651im_/http://www.roblox.com/images/cssspecific/rbx2/head_infobox_icons.png) no-repeat 0 -122px;
+}
+
+.CurrencyColorFree {
+    color: #080;
+}
+
+.ConfirmationModal .GenericModalBody .validationTooltip {
+    color: #a00;
+    font-size: 11px;
+    display: inline;
+}
+
+#DeleteProductPromotionModal .thumbs-up-green {
+    width: 110px;
+    height: 110px;
+    background: url('/web/20160216070651im_/http://www.roblox.com/images/Icons/thumbs_up.png') no-repeat;
+    display: block;
+}
+
+#DeleteProductPromotionModal .btn-blue-ok-sharp {
+    height: 50px;
+    width: 102px;
+    display: inline-block;
+    background: url('/web/20160216070651im_/http://www.roblox.com/images/Buttons/btn_blue_ok_l.png') top left no-repeat;
+}
+
+#DeleteProductPromotionModal .btn-blue-ok-sharp:hover {
+    cursor: pointer;
+    background-position: bottom left;
+}
+
+.ConfirmationModal .GenericModalBody .validationTooltip {
+    color: #a00;
+    font-size: 11px;
+    display: inline;
+}
+
+.ABCloseCircle {
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.closeBtnCircle_35h:hover {
+    background-position: 0 35px;
+}
+
+.closeBtnCircle_35h {
+    width: 35px;
+    height: 35px;
+    background: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/closeBtnCircle_35h.png);
+}
+
+.closeBtnCircle_20h:hover {
+    background-position: 0 20px;
+}
+
+.closeBtnCircle_20h {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 395px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: url(/web/20160216070651im_/http://www.roblox.com/images/Buttons/btn-x.png);
+}
+
+
+.VisitButtonPlay .btn-primary,.VisitButtonPlayPH .btn-primary {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    background-color: #02b757;
+    border-color: rgba(255,255,255,0);
+    height: auto;
+    transition: all,0.2s,ease-in-out;
+    padding: 15px 32px;
+    font-size: 1.375em;
+    line-height: 100%;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.VisitButtonPlay .btn-primary:hover,.VisitButtonPlayPH .btn-primary:hover {
+    text-decoration: none;
+    background-color: #01853f;
+    border-color: rgba(224,224,224,0);
+    box-shadow: 0 1px 3px rgba(150,150,150,0.74);
+    cursor: pointer;
+    color: #fff;
+}
+
+.rbx-visit-button-poor-performance {
+    padding: 0 15px;
+    margin-top: 10px;
+}
+
+
+.rbx-carousel {
+    width: 576px;
+    height: 324px;
+}
+
+.rbx-carousel .flex-video {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rbx-carousel .flex-video iframe,.rbx-carousel .flex-video object,.rbx-carousel .flex-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rbx-carousel .flex-video.widescreen {
+    padding-bottom: 52.25%;
+}
+
+.rbx-carousel .carousel-indicators {
+    bottom: 32px;
+}
+
+.rbx-carousel .carousel-control,.rbx-carousel .carousel-indicators {
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rbx-carousel:hover .carousel-indicators,.rbx-carousel:hover .carousel-control,.rbx-carousel.hover .carousel-indicators,.rbx-carousel.hover .carousel-control {
+    display: block;
+}
+
+.rbx-carousel .rbx-icon-carousel-left,.rbx-carousel .rbx-icon-carousel-right {
+    margin-top: -30px;
+    top: 50%;
+    position: absolute;
+    vertical-align: bottom;
+    background-size: 120px auto;
+    width: 60px;
+    height: 60px;
+}
+
+.rbx-carousel .rbx-icon-carousel-left {
+    left: 50%;
+    margin-left: -30px;
+    background-position: 0 -2400px;
+}
+
+.rbx-carousel .rbx-icon-carousel-right {
+    right: 50%;
+    margin-right: -30px;
+    background-position: 0 -2340px;
+}
+
+.rbx-carousel .carousel-indicators li {
+    height: 20px;
+    width: 20px;
+    box-shadow: 0 1px 3px rgba(150,150,150,0.74);
+}
+
+.rbx-carousel .carousel-indicators .active {
+    height: 22px;
+    width: 22px;
+}
+
+@media only screen and (max-device-width: 800px),only screen and (device-width:1024px) and (device-height:600px),only screen and (width:1280px) and (orientation:landscape),only screen and (device-width:800px),only screen and (max-width:767px) {
+    .rbx-carousel .flex-video {
+        padding-top:0;
+    }
+}
+
+.content {
+    max-width: 1154px;
+}
+
+.page-content {
+    float: left;
+    max-width: 970px;
+}
+
+.page-content .rbx-tabs-horizontal {
+    margin: 8px auto;
+}
+
+.page-content .rbx-tabs-horizontal .rbx-tab {
+    width: 25%;
+}
+
+@media(max-width: 479px) {
+    .page-content .rbx-tabs-horizontal .tab-about {
+        width:19%;
+    }
+
+    .page-content .rbx-tabs-horizontal .tab-store {
+        width: 18%;
+    }
+
+    .page-content .rbx-tabs-horizontal .tab-leaderboards {
+        width: 38%;
+    }
+
+    .page-content .rbx-tabs-horizontal .tab-game-instances {
+        width: 25%;
+    }
+}
+
+.page-content .rbx-tabs-horizontal .rbx-tab-content {
+    margin-bottom: 8px;
+}
+
+.page-content.in-app,.page-content.hide-ads {
+    float: none;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+@media(min-width: 480px) and (max-width:560px) {
+    .rbx-tabs-horizontal .rbx-tab .rbx-tab-heading {
+        height:74px;
+    }
+}
+
+@media(max-width: 1174px) {
+    .page-content {
+        float:none;
+        margin: 0 auto;
+        padding: 0 12px;
+    }
+}
+
+.store,.game-instances {
+    padding-top: 12px;
+}
+
+.game-main-content {
+    min-height: 345px;
+    background-color: white;
+    padding: 12px;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.game-main-content:before,.game-main-content:after {
+    content: " ";
+    display: table;
+}
+
+.game-main-content:after {
+    clear: both;
+}
+
+.game-main-content .game-thumb-container {
+    float: left;
+}
+
+.game-main-content .game-thumb-container .rbx-carousel {
+    margin: 0 auto;
+}
+
+.game-main-content .game-thumb-container .rbx-carousel .CarouselThumb {
+    width: 100%;
+}
+
+.game-main-content .game-thumb-container .video-thumb {
+    margin-top: -13.5%;
+    width: 100%;
+}
+
+.game-main-content .game-thumb-container .video-play-icon {
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    width: 33%;
+    opacity: .7;
+}
+
+@media(max-width: 767px) {
+    .game-main-content .game-thumb-container .rbx-carousel {
+        width:100%;
+        height: auto;
+    }
+}
+
+.game-main-content .game-calls-to-action {
+    width: 36%;
+    width: calc(100% - 576px);
+    float: left;
+    padding: 0 12px 0 24px;
+}
+
+.game-main-content .game-calls-to-action .game-name {
+    height: 138px;
+    overflow: hidden;
+}
+
+.game-main-content .game-calls-to-action .game-name:after {
+    height: 62px;
+    width: 20%;
+}
+
+.game-main-content .game-calls-to-action .game-creator span {
+    color: #b8b8b8;
+    font-weight: 300;
+}
+
+.game-main-content .game-play-buttons {
+    padding: 12px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.game-main-content .game-play-buttons .rbx-btn-primary-lg {
+    width: 88%;
+}
+
+.game-main-content .game-play-buttons .PurchaseButton {
+    white-space: normal;
+}
+
+.game-main-content .share-rate-favorite {
+    margin: 12px 0 0;
+}
+
+.game-main-content .share-rate-favorite:before,.game-main-content .share-rate-favorite:after {
+    content: " ";
+    display: table;
+}
+
+.game-main-content .share-rate-favorite:after {
+    clear: both;
+}
+
+@media(max-width: 991px) {
+    .game-main-content .game-thumb-container,.game-main-content .game-calls-to-action {
+        float:none;
+        width: 100%;
+    }
+}
+
+#rbx-carousel .carousel-control {
+    top: 30px;
+    bottom: 31px;
+    background-image: none;
+    width: 11%;
+}
+
+.game-about-container h3 {
+    margin-left: 12px;
+}
+
+.rbx-visit-button-access-denied {
+    text-align: left;
+}
+
+#game-context-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 2;
+}
+
+@media(max-width: 992px) {
+    #game-context-menu {
+        position:relative;
+        top: 0;
+        right: 0;
+        float: right;
+    }
+}
+
+.game-description {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.game-access-restrictions {
+    border-top: 1px solid #ccc;
+}
+
+.game-access-restrictions:before,.game-access-restrictions:after {
+    content: " ";
+    display: table;
+}
+
+.game-access-restrictions:after {
+    clear: both;
+}
+
+.game-access-restrictions .game-access {
+    width: 33.33333%;
+    float: left;
+    text-align: center;
+}
+
+.game-stats-container {
+    padding: 12px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.game-stats-container:before,.game-stats-container:after {
+    content: " ";
+    display: table;
+}
+
+.game-stats-container:after {
+    clear: both;
+}
+
+.game-stats-container .game-stat {
+    width: 16.66667%;
+    float: left;
+    text-align: center;
+}
+
+.game-stats-container .game-stat .stat-title {
+    font-weight: 400;
+    color: #757575;
+    white-space: nowrap;
+}
+
+@media(max-width: 991px) {
+    .game-stats-container .game-stat .stat-title {
+        margin:12px 6px;
+    }
+}
+
+@media(max-width: 767px) {
+    .game-stats-container .game-stat .stat-title {
+        display:inline-block;
+        float: left;
+        margin: 0;
+        text-align: left;
+        width: 45%;
+    }
+}
+
+.game-stats-container .game-stat .stat-gears {
+    margin: 12px auto;
+}
+
+.game-stats-container .game-stat span[class^="rbx-icon"] {
+    display: inline-block;
+    width: 20%;
+}
+
+@media(max-width: 991px) {
+    .game-stats-container .game-stat span[class^="rbx-icon"] {
+        width:30%;
+    }
+}
+
+@media(max-width: 767px) {
+    .game-stats-container .game-stat span[class^="rbx-icon"] {
+        width:20%;
+    }
+}
+
+@media(max-width: 479px) {
+    .game-stats-container .game-stat span[class^="rbx-icon"] {
+        width:30%;
+    }
+}
+
+@media(max-width: 991px) {
+    .game-stats-container .game-stat {
+        width:16%;
+    }
+}
+
+@media(max-width: 767px) {
+    .game-stats-container .game-stat {
+        width:100%;
+        margin: 0 0 12px 0;
+    }
+
+    .game-stats-container .game-stat:before,.game-stats-container .game-stat:after {
+        content: " ";
+        display: table;
+    }
+
+    .game-stats-container .game-stat:after {
+        clear: both;
+    }
+
+    .game-stats-container .game-stat .rbx-lead {
+        width: 45%;
+        display: inline-block;
+        text-align: left;
+        margin: 0;
+    }
+}
+
+.game-stat-footer {
+    padding: 24px 0 12px;
+    font-style: italic;
+}
+
+.game-stat-footer:before,.game-stat-footer:after {
+    content: " ";
+    display: table;
+}
+
+.game-stat-footer:after {
+    clear: both;
+}
+
+.game-stat-footer .game-copylocked-footnote {
+    float: left;
+    color: #757575;
+}
+
+.game-stat-footer .game-report-abuse {
+    float: right;
+}
+
+.game-stat-footer .game-report-abuse a,.game-stat-footer .game-report-abuse a:link {
+    color: #e2231a;
+    font-weight: 300;
+}
+
+.badge-row {
+    height: 160px;
+}
+
+.badge-row .badge-image,.badge-row .badge-data-container {
+    display: inline-block;
+    float: left;
+}
+
+.badge-row .badge-image {
+    width: 150px;
+    text-align: center;
+}
+
+.badge-row .badge-image img {
+    width: 150px;
+    height: 150px;
+}
+
+.badge-row .badge-data-container {
+    width: auto;
+    width: calc(75% - 150px);
+    padding: 0 12px;
+}
+
+.badge-row .badge-data-container p {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    white-space: normal;
+    max-height: 100px;
+    margin: 12px 0;
+    word-wrap: break-word;
+}
+
+.badge-row .badge-data-container p:after {
+    background-image: linear-gradient(to right,rgba(255,255,255,0) 0,white 90%);
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+.badge-row .badge-stats-container {
+    float: right;
+    width: 25%;
+    margin: 36px 0 0;
+}
+
+.badge-row .badge-stats-container li {
+    margin: 0 0 6px;
+}
+
+@media(max-width: 767px) {
+    .badge-row .badge-image,.badge-row .badge-data-container,.badge-row .badge-stats-container {
+        float:none;
+        width: 100%;
+    }
+
+    .badge-row .badge-data-container {
+        padding: 0;
+    }
+
+    .badge-row .badge-stats-container {
+        margin: 12px 0 0;
+    }
+}
+
+@media(max-width: 767px) {
+    .badge-row {
+        height:auto;
+    }
+}
+
+.share-rate-favorite li {
+    float: left;
+}
+
+.share-rate-favorite span[class^="rbx-icon"]:hover {
+    cursor: pointer;
+}
+
+.favorite-button-container {
+    width: 27%;
+    padding-left: 4px;
+}
+
+.favorite-button-container span {
+    float: left;
+    color: #f68802;
+}
+
+.game-calls-to-action .voting-panel {
+    width: 50%;
+    min-width: 138px;
+    position: relative;
+}
+
+.game-calls-to-action .voting-panel span {
+    float: left;
+    line-height: 28px;
+}
+
+.game-calls-to-action .voting-panel .loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("/web/20160216070651im_/http://www.roblox.com/images/ProgressIndicator4.gif") white no-repeat center;
+    z-index: 1;
+    display: none;
+}
+
+.game-calls-to-action .voting-panel .visual-container {
+    position: relative;
+    width: 138px;
+    height: 5px;
+    margin: 6px auto;
+}
+
+.game-calls-to-action .voting-panel .visual-container .background {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.game-calls-to-action .voting-panel .visual-container .background.votes {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #d86868;
+}
+
+.game-calls-to-action .voting-panel .visual-container .percent {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: #02b757;
+}
+
+.game-calls-to-action .voting-panel .visual-container .vote-text {
+    margin: 6px 0 0;
+}
+
+@media(max-width: 991px) {
+    .game-calls-to-action .voting-panel .visual-container {
+        width:100%;
+    }
+}
+
+.game-calls-to-action .voting-panel .percent,.game-calls-to-action .voting-panel .background {
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+}
+
+.game-calls-to-action .voting-panel .background {
+    width: 100%;
+}
+
+.game-calls-to-action .voting-panel .percent {
+    width: 0;
+}
+
+.game-calls-to-action .voting-panel .downvote,.game-calls-to-action .voting-panel .upvote {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.game-calls-to-action .voting-panel .upvote {
+    left: 0;
+}
+
+.game-calls-to-action .voting-panel .upvote span {
+    color: #02b757;
+}
+
+.game-calls-to-action .voting-panel .downvote span {
+    color: #e2231a;
+}
+
+.game-calls-to-action .voting-panel .users-vote {
+    height: 28px;
+}
+
+.social-media-share {
+    float: left;
+    width: 20%;
+}
+
+.social-media-share #rbx-share-btn {
+    cursor: pointer;
+    margin: auto;
+    display: block;
+}
+
+.social-media-share .popover.bottom {
+    right: 5px;
+}
+
+.social-media-share .share-container-inner {
+    padding: 10px;
+}
+
+.social-media-share .share-container-inner .catchy-title {
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    width: 198px;
+}
+
+.social-media-share .share-container-inner .catchy-title {
+    margin: 0;
+}
+
+.social-media-share .share-container-inner .catchy-title span {
+    vertical-align: middle;
+}
+
+.social-media-share .share-container-inner .copy-to-clipboard {
+    cursor: text;
+}
+
+.social-media-share .share-container-inner .catchy-title-tooltip-hover {
+    display: none;
+    position: absolute;
+    width: 205px;
+    height: 125px;
+    opacity: .9;
+    background-color: white;
+    top: 41px;
+    left: 8px;
+    margin-top: -4px;
+}
+
+.social-media-share .share-container-inner #gigya-target table {
+    margin: 0 7px;
+}
+
+.social-media-share .share-container-inner #gigya-target .social-button-template .social-button-icon-img {
+    width: 48px;
+    height: 48px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.social-media-share .share-container-inner #gigya-target .social-button-template .social-button-counter {
+    display: none;
+    width: 44px;
+    text-align: center;
+    margin: 5px 0 5px 5px;
+    border: solid 1px #b8b8b8;
+}
+
+.social-media-share #rbx-share-container {
+    display: none;
+}
+
+.comments-container {
+    padding: 12px;
+}
+
+.comments-container .comments-item-template {
+    display: none;
+}
+
+.comments-container .rbx-form-horizontal button {
+    width: auto;
+}
+
+.comments-container .rbx-comment-msgs {
+    position: relative;
+    min-height: 1.3em;
+}
+
+.comments-container .rbx-comment-count {
+    position: absolute;
+    right: 0;
+}
+
+.comments-container .rbx-comment-input {
+    resize: none;
+    line-height: 150%;
+}
+
+.comments-container .rbx-comment-input.blur {
+    height: 38px;
+}
+
+.comments-container .comment-item {
+    position: relative;
+}
+
+.comments-container .comment-item .comment-content {
+    overflow: hidden;
+}
+
+.comments-container .comment-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.comments-container .vlist .list-item .list-body {
+    width: auto;
+    width: calc(100% - 124px);
+}
+
+.comments-container .rbx-form-horizontal button {
+    margin-bottom: 12px;
+}
+
+.comments-container .comment-form {
+    padding-bottom: 5px;
+}
+
+.comments-container .comment-form .Avatar {
+    float: left;
+    display: inline-block;
+}
+
+.comments-container .comment-form .rbx-form-group {
+    width: 65%;
+    width: calc(75% - 124px);
+}
+
+.comments-container .loading {
+    height: 48px;
+    width: 100%;
+    background: url("/web/20160216070651im_/http://www.roblox.com/images/ProgressIndicator4.gif") white no-repeat center;
+}
+
+#AjaxCommentsMoreButtonContainer {
+    padding-top: 5px;
+}
+
+#AjaxCommentsMoreButtonContainer .rbx-comments-see-more {
+    width: 100%;
+}
+
+.rbx-leaderboard-player {
+    margin-right: 5px;
+}
+
+@media(max-width: 991px) {
+    .rbx-leaderboard-player {
+        margin-right:0;
+    }
+}
+
+.rbx-leaderboard-clan {
+    margin-left: 5px;
+}
+
+@media(max-width: 991px) {
+    .rbx-leaderboard-clan {
+        margin-left:0;
+    }
+}
+
+.rbx-leaderboard-header {
+    height: 47px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.rbx-has-rank .rbx-leaderboard-items {
+    height: 427px;
+}
+
+.rbx-leaderboard-controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.rbx-leaderboard-controls .rbx-icon-sorting {
+    cursor: pointer;
+}
+
+.rbx-leaderboard-controls .rbx-leaderboard-filter .rbx-dropdown-menu {
+    height: auto;
+}
+
+.rbx-leaderboard-controls .rbx-menu-item {
+    display: block;
+    float: left;
+}
+
+.rbx-leaderboard-filter span {
+    float: left;
+}
+
+.rbx-leaderboard-filtername {
+    padding-right: 14px;
+    padding-top: 3px;
+}
+
+.rbx-leaderboard-items {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 500px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.rbx-leaderboard-my {
+    overflow: hidden;
+}
+
+.rbx-leaderboard-item {
+    width: 459px;
+    height: 73px;
+    padding-top: 5px;
+}
+
+@media(max-width: 991px) {
+    .rbx-leaderboard-item {
+        width:100%;
+    }
+}
+
+.rbx-leaderboard-item .rank,.rbx-leaderboard-item .avatar,.rbx-leaderboard-item .name-and-group,.rbx-leaderboard-item .points {
+    display: inline-block;
+}
+
+.rbx-leaderboard-item .rank {
+    text-align: center;
+    width: 8%;
+}
+
+.rbx-leaderboard-item .avatar {
+    width: 48px;
+}
+
+.rbx-leaderboard-item .name-and-group {
+    width: 60%;
+    width: calc(77% - 68px);
+    vertical-align: middle;
+}
+
+.rbx-leaderboard-item .name-and-group a {
+    display: block;
+}
+
+.rbx-leaderboard-item .points {
+    width: 15%;
+    font-weight: bold;
+}
+
+.rbx-leaderboard-my .rbx-leaderboard-item {
+    border-bottom: 1px solid #ccc;
+    width: 480px;
+}
+
+.rbx-leaderboard-item .name,.rbx-leaderboard-item .group {
+    display: block;
+}
+
+@media(max-width: 991px) {
+    .rbx-leaderboard-item .group {
+        width:100%;
+    }
+}
+
+.rbx-leaderboard-notification p {
+    padding-left: 14px;
+}
+
+.rbx-leaderboard-more-container {
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.rbx-leaderboard-more-container .rbx-leaderboard-see-more {
+    width: 100%;
+}
+
+.rbx-leaderboard-btn-player {
+    margin-right: 6px;
+}
+
+@media(max-width: 991px) {
+    .rbx-leaderboard-btn-player {
+        margin-right:0;
+    }
+}
+
+.rbx-leaderboard-btn-clan {
+    margin-left: 6px;
+}
+
+@media(max-width: 991px) {
+    .rbx-leaderboard-btn-clan {
+        margin-left:0;
+    }
+}
+
+.game-dev-store {
+    overflow: hidden;
+    max-height: 624px;
+}
+
+.game-dev-store .container-header {
+    margin-bottom: 0;
+}
+
+.game-dev-store .list-item {
+    width: 20%;
+    padding: 12px 0;
+}
+
+@media(max-width: 991px) {
+    .game-dev-store .list-item {
+        width:25%;
+    }
+}
+
+@media(max-width: 767px) {
+    .game-dev-store .list-item {
+        width:33.33333%;
+    }
+}
+
+@media(max-width: 479px) {
+    .game-dev-store .list-item {
+        width:50%;
+    }
+}
+
+.game-dev-store .rbx-item-card {
+    position: relative;
+    margin: 0 auto;
+}
+
+.game-dev-store .rbx-gear-passes-purchase {
+    width: 100%;
+}
+
+.game-dev-store .rbx-item-buy {
+    margin: 6px 0 0;
+    height: 32px;
+    text-align: center;
+}
+
+.game-dev-store .rbx-item-buy .rbx-text-notes {
+    display: block;
+    padding: 5px;
+}
+
+.game-dev-store .rbx-gear-passes-item-add .rbx-item-card {
+    min-height: 273px;
+    text-align: center;
+}
+
+.game-dev-store .rbx-gear-passes-item-add .rbx-item-card .item-card-add {
+    font-size: 120px;
+    font-weight: 300;
+    line-height: 180%;
+}
+
+.game-dev-store .rbx-gear-passes-item-add .rbx-item-card .item-card-add-label {
+    display: block;
+    margin-top: -60px;
+}
+
+.game-dev-store .gear-passes-container.collapsed {
+    overflow: hidden;
+    height: 293px;
+}
+
+.game-dev-store .gear-passes-asset {
+    padding-bottom: 5px;
+}
+
+@media(max-width: 479px) {
+    .game-dev-store {
+        max-height:none;
+    }
+
+    .game-dev-store .rbx-item-card img {
+        width: 100%;
+    }
+
+    .comments-container {
+        padding: 0;
+    }
+
+    .comments-container .comment-form .rbx-form-horizontal button {
+        width: 100%;
+    }
+
+    .comments-container .comment-form .rbx-form-horizontal .rbx-form-group {
+        width: 100%;
+    }
+
+    .share-rate-favorite .favorite-button-container {
+        width: 30%;
+        padding-left: 0;
+    }
+
+    .share-rate-favorite .social-media-share {
+        width: 18%;
+    }
+
+    .game-main-content .game-calls-to-action {
+        padding: 0;
+    }
+}
+
+.game-gear .rbx-gear-item-delete {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+.rbx-game-server-template,.rbx-vip-server-template {
+    display: none;
+}
+
+.rbx-game-server-item .owner-avatar,.rbx-vip-server-item .owner-avatar {
+    display: block;
+    text-align: center;
+    min-height: 100px;
+}
+
+.rbx-game-server-item .rbx-link,.rbx-vip-server-item .rbx-link {
+    padding: 5px 0;
+}
+
+.rbx-game-server-item .rbx-game-status,.rbx-vip-server-item .rbx-game-status {
+    color: #ccc;
+}
+
+.rbx-game-server-item .rbx-btn-control-xs,.rbx-vip-server-item .rbx-btn-control-xs {
+    margin: 12px auto 0;
+}
+
+.rbx-game-server-item.rbx-vip-server-cancelled-insufficient-funds,.rbx-vip-server-item.rbx-vip-server-cancelled-insufficient-funds {
+    color: #ccc;
+}
+
+.rbx-game-server-item .rbx-vip-server-subscription-alert,.rbx-vip-server-item .rbx-vip-server-subscription-alert {
+    color: #e2231a;
+    margin-top: 3px;
+}
+
+.rbx-game-server-item .rbx-vip-server-subscription-alert .rbx-icon-remove,.rbx-vip-server-item .rbx-vip-server-subscription-alert .rbx-icon-remove {
+    margin-right: 2px;
+}
+
+.rbx-game-server-item .rbx-vip-server-subscription-alert .rbx-vip-server-subscription-alert-text,.rbx-vip-server-item .rbx-vip-server-subscription-alert .rbx-vip-server-subscription-alert-text {
+    vertical-align: top;
+}
+
+.badge-see-more-row {
+    display: none;
+}
+
+
+.game {
+    width: 160px;
+    padding: 0 1px;
+}
+
+@media(max-width: 768px) {
+    .game {
+        width:auto;
+    }
+}
+
+.game .game-item {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(150,150,150,0.74);
+    border-radius: 3px;
+    width: 100%;
+    min-width: 123px;
+    height: auto;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.game span {
+    display: block;
+}
+
+.game .game-thumb {
+    text-align: center;
+}
+
+.game .game-thumb img {
+    width: 144px;
+    height: 81px;
+    margin: 0;
+}
+
+.game .rbx-title,.game .rbx-text-notes {
+    width: auto;
+    width: calc(100% - 12px);
+    margin: 0 6px;
+    white-space: nowrap;
+}
+
+.game .rbx-title {
+    margin-top: 3px;
+}
+
+.game .rbx-title:hover {
+    color: #00a2ff;
+}
+
+.game .rbx-text-notes {
+    margin: 3px 6px 5px;
+}
+
+.game .rbx-text-notes.rbx-font-sm {
+    font-weight: 300;
+}
+
+
+.private-server-purchase>.game-name {
+    font-weight: 400;
+}
+
+div.GenericModalBody .TopBody.private-server-purchase-modal {
+    height: auto;
+    min-height: 100px;
+}
+
+div.GenericModalBody .TopBody.private-server-purchase-modal .Message {
+    top: 0;
+}
+
+div.GenericModalBody .TopBody.private-server-purchase-modal .private-server-name-input {
+    margin-top: 10px;
+}
+
+div.GenericModalBody .TopBody.private-server-purchase-modal .private-server-name-input input {
+    width: 226px;
+}
+
+div.GenericModalBody .TopBody.private-server-purchase-modal .note {
+    margin-top: 15px;
+}
+
+.private-server-name-error-message {
+    display: none;
+    color: #b00;
+}
+
+.create-server-banner-text {
+    line-height: 2.5em;
+}
+
+@media(max-width: 767px) {
+    .create-server-banner-text {
+        display:table-footer-group;
+        text-align: center;
+    }
+
+    .create-server-banner {
+        display: table;
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 24px;
+    }
+
+    .rbx-vip-server-create {
+        vertical-align: middle;
+        margin-top: 2%;
+        width: 100%;
+        display: table-header-group;
+    }
+}
+
+.private-server-create-btn-container {
+    text-align: center;
+}
+
+.private-server-purchase .private-server-game-name {
+    margin-top: 8px;
+}
+
+.fake-input-lg {
+    height: 46px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+.fake-input-lg label {
+    padding: 5px 8px;
+    font-weight: 300;
+}
+
+#GameDisplayModal .voting-panel span {
+    float: none;
+}
+
+#GameDisplayModal .close-button {
+    display: none;
+}
+
+
+#videoPrerollPanel {
+    display: none;
+    width: 713px;
+    padding: 20px 20px 20px 35px;
+    background-color: #fff;
+    box-sizing: content-box;
+}
+
+#videoPrerollTitleDiv {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#videoPrerollMainDiv {
+    width: 391px;
+    height: 312px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#videoPrerollCompanionAd {
+    width: 300px;
+    height: 250px;
+    margin: 0;
+    padding-top: 25px;
+    padding-left: 20px;
+    float: left;
+}
+
+#videoPrerollLoadingDiv {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 13px;
+    clear: both;
+    width: 584px;
+    padding-top: 30px;
+}
+
+#videoPrerollLoadingBar {
+    width: 582px;
+    height: 8px;
+    border: 1px solid #697D03;
+    background-color: #808081;
+}
+
+#videoPrerollLoadingBarCompleted {
+    background-color: #CBFF01;
+    height: 8px;
+    width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#videoPrerollJoinBC {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 22px;
+}
+
+#videoPrerollJoinBCButton {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.container-main .game .game-item:hover {
+    z-index: 900;
+}
+
+.container-main .game .game-item:hover .rbx-votes .vote-bar .thumbs-down {
+    visibility: visible;
+}
+
+.container-main .game .game-item:hover .rbx-votes .vote-bar .voting-container .background {
+    background-color: #d86868;
+    opacity: .6;
+}
+
+.container-main .game .game-item:hover .rbx-votes .vote-bar .voting-container .background.no-votes {
+    background-color: #757575;
+}
+
+.container-main .game .game-item:hover .rbx-votes .vote-bar .voting-container .votes {
+    background-color: #02b757;
+}
+
+.container-main .game .game-item:hover .rbx-votes .vote-counts {
+    display: block;
+    float: left;
+}
+
+.container-main .game .game-item:hover .rbx-developer {
+    display: block;
+    float: left;
+}
+
+.container-main .game .game-item:hover .game {
+    position: absolute;
+}
+
+.container-main.rbx-touch .game .game-item:hover {
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(150,150,150,0.74);
+    z-index: auto;
+}
+
+.container-main.rbx-touch .game .game-item:hover .rbx-votes .vote-bar .thumbs-down {
+    visibility: hidden;
+}
+
+.container-main.rbx-touch .game .game-item:hover .rbx-votes .vote-bar .voting-container .background {
+    background-color: #ccc;
+}
+
+.container-main.rbx-touch .game .game-item:hover .rbx-votes .vote-bar .voting-container .votes {
+    background-color: #757575;
+}
+
+.container-main.rbx-touch .game .game-item:hover .rbx-votes .vote-counts {
+    display: none;
+    float: none;
+}
+
+.container-main.rbx-touch .game .game-item:hover .rbx-developer {
+    display: none;
+    float: none;
+}
+
+.game-list {
+    display: block;
+    white-space: nowrap;
+}
+
+@media(max-width: 768px) {
+    .game-list {
+        overflow-x:auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.card {
+    padding: 0 4px;
+    display: inline-block;
+}
+
+.card .card-item {
+    position: relative;
+    text-align: left;
+    float: left;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(150,150,150,0.74);
+    border-radius: 3px;
+    min-width: 123px;
+    height: auto;
+    padding: 9px 6px 6px 6px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card .card-item .card-thumb-content {
+    position: relative;
+    height: 140px;
+    width: auto;
+    display: inline-block;
+}
+
+.card .card-item .card-thumb-content .card-thumb-wrapper {
+    height: 140px;
+    width: auto;
+    overflow: hidden;
+    display: inline-block;
+    margin: auto;
+}
+
+.card .card-item .card-thumb-content .card-thumb-wrapper .card-thumb {
+    display: block;
+    height: 100%;
+}
+
+.card .card-item .card-title {
+    width: 132px;
+    margin: 1px 3px 0 3px;
+    white-space: nowrap;
+    display: block;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+.card .card-item .card-text-notes {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    white-space: nowrap;
+    display: block;
+    line-height: 1.2em;
+    margin: 1px 3px;
+    color: #757575;
+    width: 132px;
+}
+
+.card .card-item .card-text-notes:after {
+    background-image: linear-gradient(to right,rgba(255,255,255,0) 0,#fff 90%);
+    content: "";
+    height: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+.group {
+    width: 160px;
+    margin-bottom: 12px;
+}
+
+.game .game-item .game-thumb {
+    margin: auto;
+    width: auto;
+}
+
+.game .game-item .rbx-votes {
+    width: 100%;
+    display: block;
+    padding-left: 1px;
+    margin-top: 9px;
+}
+
+.game .game-item .rbx-votes .vote-bar {
+    position: relative;
+    height: 16px;
+}
+
+.game .game-item .rbx-votes .vote-bar .thumbs-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.game .game-item .rbx-votes .vote-bar .thumbs-down {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: .6;
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container {
+    position: relative;
+    width: 100px;
+    margin: auto;
+    height: 6px;
+    top: 4px;
+    margin-left: 18px;
+}
+
+@media(min-width: 480px) {
+    .game .game-item .rbx-votes .vote-bar .voting-container {
+        margin-left:auto;
+    }
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container .background {
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container .votes {
+    background-color: #757575;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container .mask .segment {
+    background-color: white;
+    height: 16px;
+    width: 2px;
+    position: absolute;
+    top: 0;
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container .mask .seg-one {
+    left: 18px;
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container .mask .seg-two {
+    left: 38px;
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container .mask .seg-three {
+    left: 58px;
+}
+
+.game .game-item .rbx-votes .vote-bar .voting-container .mask .seg-four {
+    left: 78px;
+}
+
+.game .game-item .rbx-votes .vote-counts {
+    position: relative;
+    padding-bottom: 6px;
+    width: 100%;
+    display: none;
+}
+
+.game .game-item .rbx-votes .vote-counts .up-votes-count {
+    color: #02b757;
+}
+
+.game .game-item .rbx-votes .vote-counts .down-votes-count {
+    float: right;
+    color: rgba(216,104,104,0.6);
+    opacity: .6;
+}
+
+.game .game-item .rbx-developer {
+    display: none;
+    border-top: 1px solid #b8b8b8;
+    width: 100%;
+    padding-top: 6px;
+}
+
+.hlist .game {
+    height: 221px;
+    display: inline-block;
+    float: none;
+}
+
+
+.container-buttons .profile-view-selector {
+    padding: 2px 20px 0 20px;
+}
+
+.shop-modal {
+    background-color: white;
+    height: 290px;
+    width: 760px;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-image: url(/web/20160216070651im_/http://www.roblox.com/images/Shop/combo.jpg);
+    background-position: right;
+    background-size: 497px 290px;
+}
+
+.shop-modal .shop-modal-item-left {
+    width: 430px;
+    padding: 20px 30px;
+    text-align: left;
+}
+
+.shop-modal .shop-modal-item-left h2 {
+    width: 85%;
+    color: #191919;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.shop-modal .shop-modal-item-left .body-text {
+    width: 60%;
+    color: #191919;
+    padding-top: 7px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1em;
+}
+
+.shop-modal .shop-modal-item-left .controls {
+    margin-top: 38px;
+    display: inline-block;
+}
+
+.shop-modal .shop-modal-item-left .controls .btn-continue-shopping {
+    float: left;
+    padding: 7px 8px 3px 8px;
+}
+
+.shop-modal .shop-modal-item-left .controls .btn-shopping-close {
+    color: #00a2ff;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1em;
+}
+
+.shop-modal .shop-modal-item-left .controls .btn-shopping-close:hover {
+    text-decoration: underline;
+}
+
+.shop-modal .shop-modal-item-left .fine-print {
+    color: #b8b8b8;
+    padding-top: 12px;
+    padding-bottom: 30px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1em;
+}
+
+.shop-modal .shop-modal-item-left .fine-print a {
+    color: #00a2ff;
+    font-size: 12px;
+    font-weight: 400px;
+}
+
+.shop-modal .shop-modal-item-left .fine-print a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 991px) {
+    .shop-modal .shop-modal-item-left {
+        float:left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+    }
+}
+
+@media(max-width: 767px) {
+    .shop-modal .shop-modal-item-left {
+        width:30%;
+    }
+}
+
+@media(max-width: 479px) {
+    .shop-modal .shop-modal-item-left {
+        width:100%;
+        display: block;
+        height: auto;
+    }
+}
+
+
+
+

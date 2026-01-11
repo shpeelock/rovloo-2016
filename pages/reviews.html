@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ROBLOX Corporation"/>
+
+    <link href="../images/favicon.ico" rel="icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/cssfamily.css"/>
+    <link rel="stylesheet" href="../CSS/fetch1.css"/>
+    <link rel="stylesheet" href="../CSS/fetch2.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dark-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/reviews.css"/>
+</head>
+<body id="rbx-body" class="light-theme" data-internal-page-name="Reviews">
+
+<div id="wrap" class="wrap no-gutter-ads">
+    <div class="container-main">
+        <div class="content">
+            <div class="row page-content">
+                <div class="col-xs-12">
+                    <div class="reviews-page-container">
+                        
+                        <div class="reviews-page-header">
+                            <img src="../images/rovloo/rovloo-ico64.png" alt="Rovloo" class="rovloo-logo">
+                            <h1>Community Reviews</h1>
+                            <p class="subtitle">Browse reviews from the Rovloo community</p>
+                        </div>
+
+                        
+                        <div class="reviews-tabs">
+                            <div class="rbx-tabs-horizontal">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li id="tab-all-reviews" class="rbx-tab active">
+                                        <a class="rbx-tab-heading" href="#all-reviews" data-toggle="tab">
+                                            <span class="rbx-lead">All Reviews (<span id="totalReviewsCount">...</span>)</span>
+                                        </a>
+                                    </li>
+                                    <li id="tab-my-reviews" class="rbx-tab">
+                                        <a class="rbx-tab-heading" href="#my-reviews" data-toggle="tab">
+                                            <span class="rbx-lead">My Reviews</span>
+                                        </a>
+                                    </li>
+                                    <li id="tab-admin-picks" class="rbx-tab">
+                                        <a class="rbx-tab-heading" href="#admin-picks" data-toggle="tab">
+                                            <span class="rbx-lead">Admin Picks</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-content rbx-tab-content">
+                            
+                            <div class="tab-pane active" id="all-reviews">
+                                <div class="reviews-controls">
+                                    <div class="search-box">
+                                        <input type="text" id="reviewSearchInput" placeholder="Search by game name..." class="search-input">
+                                        <button id="reviewSearchBtn" class="btn-control">Search</button>
+                                    </div>
+                                    <div class="filter-controls">
+                                        <div class="filter-group">
+                                            <label>Filter:</label>
+                                            <select id="browseReviewFilter" class="filter-select">
+                                                <option value="all">All Reviews</option>
+                                                <option value="like">Likes Only</option>
+                                                <option value="dislike">Dislikes Only</option>
+                                            </select>
+                                        </div>
+                                        <div class="filter-group">
+                                            <label>Sort:</label>
+                                            <select id="browseReviewSort" class="filter-select">
+                                                <option value="quality">Quality</option>
+                                                <optgroup label="By Time">
+                                                    <option value="recent">Newest First</option>
+                                                    <option value="oldest">Oldest First</option>
+                                                </optgroup>
+                                                <optgroup label="By Engagement">
+                                                    <option value="highest-voted">Highest Voted</option>
+                                                    <option value="lowest-voted">Lowest Voted</option>
+                                                    <option value="most-replies">Most Replies</option>
+                                                    <option value="least-replies">Least Replies</option>
+                                                </optgroup>
+                                                <optgroup label="By Author">
+                                                    <option value="highest-rated-user">Highest Rated User</option>
+                                                    <option value="lowest-rated-user">Lowest Rated User</option>
+                                                </optgroup>
+                                                <optgroup label="By Playtime">
+                                                    <option value="most-playtime">Most Playtime</option>
+                                                    <option value="least-playtime">Least Playtime</option>
+                                                </optgroup>
+                                                <optgroup label="By Game">
+                                                    <option value="game">Game Name</option>
+                                                    <option value="highest_rated">Highest Rated Game</option>
+                                                    <option value="lowest_rated">Lowest Rated Game</option>
+                                                    <option value="most_visits">Most Visits</option>
+                                                    <option value="least_visits">Least Visits</option>
+                                                </optgroup>
+                                                <optgroup label="Discovery">
+                                                    <option value="underrated">Underrated (&lt;1K players)</option>
+                                                    <option value="hidden_gems">Hidden Gems (&lt;10K visits)</option>
+                                                    <option value="trending">Trending (Rising games)</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="browseReviewsList" class="reviews-list-container">
+                                    <div class="reviews-loading">
+                                        <img src="../images/spinners/spinner100x100.gif" alt="Loading...">
+                                        <p>Loading reviews...</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="tab-pane" id="my-reviews">
+                                <div id="myReviewsList" class="reviews-list-container">
+                                    <div class="reviews-loading">
+                                        <img src="../images/spinners/spinner100x100.gif" alt="Loading...">
+                                        <p>Loading your reviews...</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="tab-pane" id="admin-picks">
+                                <p class="admin-picks-description">Hand-picked reviews by Rovloo administrators.</p>
+                                <div id="adminPicksList" class="reviews-list-container">
+                                    <div class="reviews-loading">
+                                        <img src="../images/spinners/spinner100x100.gif" alt="Loading...">
+                                        <p>Loading admin picks...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../JS/navbar.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/components/reviews.js"></script>
+<script src="../scripts/pages/reviews.js"></script>
+</body>
+</html>
+

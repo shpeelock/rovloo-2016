@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ROBLOX Corporation"/>
+    <meta name="description" content="ROBLOX is a global platform that brings people together through play."/>
+    
+    <link href="images/favicon.ico" rel="icon"/>
+    <link href="CSS/cssfamily.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="CSS/fetch1.css"/>
+    <link rel="stylesheet" href="CSS/fetch2.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/dark-theme.css"/>
+    
+    <style>
+        
+        body {
+            background: #e3e3e3;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+        }
+
+        
+        .home-container-wrapper {
+            max-width: 970px; 
+            margin: 20px auto; 
+            display: flex;
+            gap: 10px;
+            padding: 0 5px; 
+        }
+        
+        
+        .home-main-content {
+            flex: 1;
+            background: transparent; 
+            width: 960px; 
+        }
+        
+        
+        .user-header {
+            background: transparent; 
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px; 
+        }
+        
+        .user-avatar-circle {
+            width: 144px;
+            height: 144px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .user-info h1 {
+            font-size: 34px;
+            margin: 0 0 12px 0;
+            font-weight: 400;
+            color: #191919;
+        }
+        
+        .bc-badge {
+            display: inline-block;
+            vertical-align: middle;
+            width: 52px;
+            height: 28px;
+            background: url('images/NextStyleGuide/bc.svg') no-repeat;
+            background-size: 104px 84px;
+        }
+
+        
+        .bc-badge.bc {
+            background-position: 0 0;
+        }
+
+        .bc-badge.bc-on {
+            background-position: -52px 0;
+        }
+
+        .bc-badge.tbc {
+            background-position: 0 -28px;
+        }
+
+        .bc-badge.tbc-on {
+            background-position: -52px -28px;
+        }
+
+        .bc-badge.obc {
+            background-position: 0 -56px;
+        }
+
+        .bc-badge.obc-on {
+            background-position: -52px -56px;
+        }
+        
+        
+        .friends-section {
+            background: white; 
+            border: 1px solid #c3c3c3;
+            padding: 20px;
+            padding-bottom: 10px;
+            margin-bottom: 10px; 
+            overflow: visible;
+        }
+        
+        .section-header {
+            position: relative;
+            text-align: left;
+        }
+
+        .section-header:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        .section-header h2 {
+            font-size: 24px !important;
+            font-weight: 500 !important;
+            margin: 0 0 6px !important;
+            color: #191919 !important;
+            float: left;
+            width: 70%;
+            width: calc(100% - 120px);
+            font-family: 'Source Sans Pro', Arial, sans-serif !important;
+        }
+        
+        .section-header .btn-more {
+            background: #00a2ff;
+            color: white !important;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 1px 28px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            float: right;
+            margin: 6px 0 0;
+            display: inline-block;
+        }
+        
+        .section-header .btn-more:hover {
+            background-color: #006ba6;
+        }
+        
+        .friends-carousel {
+            display: flex;
+            gap: 8px;
+            overflow: hidden;
+            justify-content: center;
+        }
+        
+        .friend-card {
+            flex-shrink: 0;
+            text-align: center;
+            width: 90px;
+            position: relative;
+        }
+        
+        .friend-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%; 
+            background: transparent;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+            display: block;
+        }
+        
+        .friend-status-badge {
+            position: absolute;
+            top: 62px;
+            right: 0px;
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+        }
+        
+        .friends-section .friends-carousel .friend-card .friend-name,
+        .friends-section .friends-carousel .friend-card a.friend-name {
+            margin-top: 5px;
+            font-size: 16px !important;
+            color: #191919 !important;
+            text-decoration: none !important;
+            display: block !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 90px;
+        }
+        
+        .friends-section .friends-carousel .friend-card .friend-name:hover,
+        .friends-section .friends-carousel .friend-card a.friend-name:hover {
+            color: #00a2ff !important;
+            text-decoration: underline !important;
+        }
+        
+        
+        .recently-played-section {
+            background: transparent; 
+            border: none;
+            margin-bottom: 10px; 
+        }
+        
+        .games-grid {
+            display: flex;
+            flex-wrap: wrap;
+            overflow: visible;
+            gap: 12px;
+        }
+
+        .game-card {
+            float: none;
+            width: 150px;
+            height: 223px;
+            padding: 0;
+            display: inline-block;
+            margin-bottom: 12px;
+            vertical-align: top;
+            white-space: normal;
+            overflow: visible;
+            position: relative;
+        }
+
+        .game-card-container {
+            background-color: #fff;
+            position: relative;
+            box-shadow: 0 1px 4px 0 rgba(25,25,25,0.3);
+            border-radius: 3px;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            padding-bottom: 0;
+            text-align: left;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            overflow: visible;
+        }
+
+        .game-card-container:hover {
+            box-shadow: 0 1px 6px 0 rgba(25,25,25,0.75);
+            height: auto;
+            z-index: 1000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        .game-card-container:hover .icon-thumbs-up {
+            background-position: -16px 0;
+            background-size: 32px auto;
+            width: 16px;
+            height: 16px;
+        }
+
+        .game-card-container:hover .vote-thumbs-down {
+            visibility: visible;
+        }
+
+        .game-card-container:hover .icon-thumbs-down {
+            background-position: -16px -16px;
+            background-size: 32px auto;
+            width: 16px;
+            height: 16px;
+        }
+
+        .game-card-container:hover .vote-container .vote-background {
+            background-color: #E27676;
+            opacity: .6;
+        }
+
+        .game-card-container:hover .vote-container .vote-background.no-votes {
+            background-color: #757575;
+        }
+
+        .game-card-container:hover .vote-container .vote-percentage {
+            background-color: #02b757;
+        }
+
+        .game-card-container:hover .vote-counts {
+            display: block;
+        }
+
+        .game-card-container:hover .game-card-footer {
+            display: block !important;
+        }
+
+        .vote-counts {
+            display: none;
+            width: 100%;
+            padding: 0 6px;
+            font-size: 16px;
+            margin-top: -6px;
+        }
+
+        .vote-counts:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .vote-up-count {
+            float: left;
+            color: #02b757;
+        }
+
+        .vote-down-count {
+            float: right;
+            color: #E27676;
+        }
+
+        .game-card-footer {
+            display: none;
+            width: 100%;
+            padding: 6px 6px 8px 6px;
+            font-size: 12px;
+            color: #646464;
+            border-top: 1px solid #e3e3e3;
+            clear: both;
+            margin-top: 6px;
+            background: white;
+            position: relative;
+            z-index: 1;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+        }
+
+        .game-card-footer .game-creator {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .game-card-footer .game-creator .creator-link {
+            color: #00a2ff;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .game-card-footer .game-creator .creator-link:hover {
+            text-decoration: underline;
+        }
+
+        .game-creator {
+            font-size: 12px;
+            color: #191919 !important;
+        }
+
+        .game-card-thumb-container {
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            position: relative;
+            height: 150px;
+            width: 150px;
+            display: inline-block;
+        }
+
+        .game-card-thumb-container .game-card-thumb {
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            height: 150px;
+            width: 150px;
+            overflow: hidden;
+            display: inline-block;
+            margin: auto;
+            object-fit: cover;
+        }
+
+        .game-card-name,
+        .game-card-name-secondary,
+        .game-card-vote {
+            width: 100%;
+            padding: 0 6px;
+            margin: 3px 0;
+        }
+
+        .game-card-name {
+            font-size: 14px;
+            font-weight: 400;
+            color: #191919;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .game-card-name-secondary {
+            font-size: 12px;
+            color: #757575;
+            margin-top: -5px;
+        }
+
+        .vote-bar {
+            position: relative;
+            height: 20px;
+        }
+
+        .vote-bar:before,
+        .vote-bar:after {
+            content: " ";
+            display: table;
+        }
+
+        .vote-bar:after {
+            clear: both;
+        }
+
+        .vote-thumbs-up,
+        .vote-container {
+            float: left;
+        }
+
+        .vote-thumbs-down {
+            float: right;
+        }
+
+        .vote-thumbs-up .icon-thumbs-up {
+            background: url('images/Icons/thumbs.svg') no-repeat;
+            background-position: 0 0;
+            background-size: 32px auto;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+
+        .vote-thumbs-down {
+            visibility: hidden;
+            opacity: .6;
+        }
+
+        .vote-thumbs-down .icon-thumbs-down {
+            background: url('images/Icons/thumbs.svg') no-repeat;
+            background-position: 0 -16px;
+            background-size: 32px auto;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+
+        .vote-container {
+            width: 70%;
+            width: calc(99% - 32px);
+            height: 6px;
+            margin: 9px auto 0 1%;
+            position: relative;
+        }
+
+        .vote-background,
+        .vote-percentage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        .vote-background {
+            background-color: #B8B8B8;
+            width: 100%;
+        }
+
+        .vote-percentage {
+            background-color: #757575;
+        }
+
+        .vote-mask .segment {
+            background-color: #fff;
+            height: 6px;
+            width: 2px;
+            position: absolute;
+            top: 0;
+        }
+
+        .vote-mask .seg-1 {
+            left: 18%;
+        }
+
+        .vote-mask .seg-2 {
+            left: 38%;
+        }
+
+        .vote-mask .seg-3 {
+            left: 58%;
+        }
+
+        .vote-mask .seg-4 {
+            left: 78%;
+        }
+
+        
+
+        
+        @media (max-width: 1000px) {
+            .home-container-wrapper {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .home-main-content {
+                width: 100%;
+            }
+
+            .games-grid {
+                gap: 10px;
+            }
+
+            .game-card {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .games-grid {
+                gap: 8px;
+            }
+
+            .game-card {
+                width: 140px;
+            }
+
+            .game-card-thumb-container {
+                width: 140px;
+                height: 140px;
+            }
+
+            .user-avatar-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .user-info h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .home-container-wrapper {
+                padding: 0 5px;
+            }
+
+            .games-grid {
+                gap: 6px;
+                justify-content: center;
+            }
+
+            .game-card {
+                width: 130px;
+            }
+
+            .game-card-thumb-container {
+                width: 130px;
+                height: 130px;
+            }
+
+            .user-header {
+                gap: 10px;
+            }
+
+            .user-avatar-circle {
+                width: 80px;
+                height: 80px;
+            }
+
+            .user-info h1 {
+                font-size: 22px;
+            }
+
+            .section-header h2 {
+                font-size: 18px;
+            }
+
+            .friend-card {
+                margin-right: 8px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .game-card {
+                width: 120px;
+            }
+
+            .game-card-thumb-container {
+                width: 120px;
+                height: 120px;
+            }
+
+            .game-card-container:hover {
+                width: 120px;
+            }
+
+            .user-info h1 {
+                font-size: 18px;
+            }
+
+            .section-header h2 {
+                font-size: 16px;
+            }
+        }
+
+        
+        .friends-loading,
+        .friends-message,
+        .games-loading,
+        .games-message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .loading-spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #e3e3e3;
+            border-top: 3px solid #00a2ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 12px;
+        }
+
+        .loading-text,
+        .message-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .retry-btn {
+            background: #00a2ff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .retry-btn:hover {
+            background: #006ba6;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        
+        @keyframes skeleton-pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        .skeleton {
+            background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+            background-size: 200% 100%;
+            animation: skeleton-pulse 1.5s ease-in-out infinite;
+        }
+
+        .skeleton-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        .skeleton-game-thumb {
+            width: 150px;
+            height: 150px;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .skeleton-text {
+            height: 14px;
+            border-radius: 4px;
+            margin: 4px 0;
+        }
+
+        .skeleton-text-short {
+            width: 60%;
+        }
+
+        .skeleton-text-medium {
+            width: 80%;
+        }
+
+        .skeleton-user-avatar {
+            width: 144px;
+            height: 144px;
+            border-radius: 50%;
+        }
+
+        
+        .loading-state {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        
+        .error-message {
+            text-align: center;
+            padding: 20px;
+            color: #d32f2f;
+            font-size: 14px;
+        }
+
+        .error-message .retry-btn {
+            background: #00a2ff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .error-message .retry-btn:hover {
+            background: #006ba6;
+        }
+
+        
+        .expanded-games-view {
+            background: transparent;
+        }
+
+        .expanded-games-view .section-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .expanded-games-view .section-header h2 {
+            float: none;
+            width: auto;
+            margin-right: auto;
+        }
+
+        .expanded-games-view .section-header .btn-more {
+            float: none;
+            margin: 0;
+        }
+
+        .expanded-games-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+    </style>
+</head>
+<body id="rbx-body" class="light-theme" data-internal="true">
+
+<div class="home-container-wrapper" style="margin-top: 60px;">
+    
+    
+    <div class="home-main-content">
+        
+        
+        <div class="user-header">
+            <img src="images/avatar-placeholder.png" class="user-avatar-circle" alt="User Avatar"/>
+            <div class="user-info">
+                <h1>Hello, <span id="username">cartoon2323</span>!</h1>
+                <span class="bc-badge bc" title="Builders Club"></span>
+            </div>
+        </div>
+        
+        
+        <div class="section-header">
+            <h2>Friends (200)</h2>
+            <a href="#friends" class="btn-more">See All</a>
+        </div>
+        <div class="friends-section">
+            <div class="friends-carousel">
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-online"></span>
+                    <a href="#" class="friend-name">Darkdemon...</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-game"></span>
+                    <a href="#" class="friend-name">Evadanique</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-online"></span>
+                    <a href="#" class="friend-name">Felix5869sle...</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-studio"></span>
+                    <a href="#" class="friend-name">huizingh</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-online"></span>
+                    <a href="#" class="friend-name">jibrai12</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-game"></span>
+                    <a href="#" class="friend-name">sampa72</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-online"></span>
+                    <a href="#" class="friend-name">TheKingMJB...</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <span class="friend-status-badge icon-game"></span>
+                    <a href="#" class="friend-name">AdamsKiller...</a>
+                </div>
+                <div class="friend-card">
+                    <img src="images/avatar-placeholder.png" class="friend-avatar" alt="Friend"/>
+                    <a href="#" class="friend-name">addison04</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="section-header">
+            <h2>Recently Played</h2>
+            <a href="#games" class="btn-more">See All</a>
+        </div>
+        <div class="recently-played-section">
+            <div class="games-grid">
+                <div class="games-loading">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-text">Loading games...</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="section-header">
+            <h2>My Favorites</h2>
+            <a href="#favorites" class="btn-more">See All</a>
+        </div>
+        <div class="favorites-section recently-played-section">
+            <div class="games-grid favorites-grid">
+                <div class="games-loading">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-text">Loading favorites...</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="section-header">
+            <h2>Recommended</h2>
+            <a href="#games" class="btn-more">See All</a>
+        </div>
+        <div class="recommended-section recently-played-section">
+            <div class="games-grid recommended-grid">
+                <div class="games-loading">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-text">Loading recommendations...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/navbar.js"></script>
+<script src="scripts/main.js"></script>
+
+
+<script src="scripts/utils/thumbnail-loader.js"></script>
+<script src="scripts/utils/playtime.js"></script>
+
+
+<script src="scripts/pages/home.js"></script>
+
+</body>
+</html>
+
+

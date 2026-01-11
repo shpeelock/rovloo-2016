@@ -1,0 +1,13 @@
+
+.inventory-main-content .rbx-tab-content {
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+
+.rbx-icon-robux,
+.icon-robux {
+    background-image: url('../images/NextStyleGuide/branded.svg') !important;
+    background-repeat: no-repeat;
+}
+

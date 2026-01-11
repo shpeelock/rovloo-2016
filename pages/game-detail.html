@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>Game - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="author" content="ROBLOX Corporation"/>
+
+    <link href="../images/favicon.ico" rel="icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="../CSS/cssfamily.css"/>
+    <link rel="stylesheet" href="../CSS/fetch1.css"/>
+    <link rel="stylesheet" href="../CSS/fetch2.css"/>
+    <link rel="stylesheet" href="../CSS/fetch3.css"/>
+    <link rel="stylesheet" href="../CSS/fetch4.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dark-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/reviews.css"/>
+</head>
+<body id="rbx-body" class="light-theme" data-performance-relative-value="0.5" data-internal-page-name="GameDetail">
+
+    <div id="wrap" class="wrap no-gutter-ads" data-gutter-ads-enabled="false">
+        
+
+        <div class="container-main">
+            <div class="content">
+
+                <div class="row page-content">
+                    <div class="col-xs-12 section game-main-content">
+                        <div class="game-thumb-container">
+                            <div id="rbx-carousel" class="rbx-carousel carousel slide" data-ride="carousel">
+                                <div id="carousel-inner" class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <span><img id="GameThumbnail" class="CarouselThumb" src="../images/game-placeholder.png" alt="Game Thumbnail"/></span>
+                                    </div>
+                                </div>
+                                
+                                <a id="carousel-prev" class="carousel-control left" href="#" role="button" style="display:none;">
+                                    <span class="carousel-arrow carousel-arrow-left"></span>
+                                </a>
+                                <a id="carousel-next" class="carousel-control right" href="#" role="button" style="display:none;">
+                                    <span class="carousel-arrow carousel-arrow-right"></span>
+                                </a>
+                                
+                                <ol id="carousel-indicators" class="carousel-indicators" style="display:none;"></ol>
+                            </div>
+                        </div>
+
+                        <div class="game-calls-to-action">
+                            <h1 id="GameTitle" class="rbx-para-overflow game-name" title="">Loading...</h1>
+                            <h4 class="game-creator"><span>By</span> <a id="CreatorLink" class="rbx-link" href="#">Loading...</a></h4>
+                            
+                            <div class="game-play-buttons">
+                                <div id="MultiplayerVisitButton" class="VisitButton VisitButtonPlay" data-placeid="">
+                                    <a id="PlayButton" class="rbx-btn-primary-lg">Play</a>
+                                </div>
+                            </div>
+
+                            <ul class="share-rate-favorite">
+                                <li class="favorite-button-container">
+                                    <a id="FavoriteButton" style="cursor: pointer;">
+                                        <span class="icon-favorite" id="FavoriteIcon"></span>
+                                        <span title="0" class="text-favorite favoriteCount">0</span>
+                                    </a>
+                                </li>
+                                <li class="voting-panel" id="VotingPanel">
+                                    <div class="vote-summary">
+                                        <div class="voting-details">
+                                            <div class="users-vote">
+                                                <div class="upvote" id="VoteUpButton" style="cursor: pointer;">
+                                                    <span class="rbx-icon-like"></span>
+                                                    <span id="vote-up-text" title="0" class="vote-text">0</span>
+                                                </div>
+                                                <div class="downvote" id="VoteDownButton" style="cursor: pointer;">
+                                                    <span id="vote-down-text" title="0" class="vote-text">0</span>
+                                                    <span class="rbx-icon-dislike"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visual-container">
+                                            <div class="background"></div>
+                                            <div class="percent"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 rbx-tabs-horizontal" id="GameDetailTabs" data-place-id="">
+                        <ul id="horizontal-tabs" class="nav nav-tabs" role="tablist">
+                            <li id="tab-about" class="rbx-tab active"><a class="rbx-tab-heading" href="#about" data-toggle="tab"><span class="rbx-lead">About</span></a></li>
+                            <li id="tab-store" class="rbx-tab"><a class="rbx-tab-heading" href="#store" data-toggle="tab"><span class="rbx-lead">Store</span></a></li>
+                            <li id="tab-game-instances" class="rbx-tab"><a class="rbx-tab-heading" href="#game-instances" data-toggle="tab"><span class="rbx-lead">Servers</span></a></li>
+                            <li id="tab-reviews" class="rbx-tab"><a class="rbx-tab-heading" href="#reviews" data-toggle="tab"><span class="rbx-lead">Reviews</span></a></li>
+                        </ul>
+                        
+                        <div class="tab-content rbx-tab-content">
+                            
+                            <div class="tab-pane active" id="about">
+                                <div class="section game-about-container">
+                                    <h3>DESCRIPTION</h3>
+                                    <p id="GameDescription" class="game-description linkify">Loading...</p>
+                                    
+                                    <ul class="game-stats-container">
+                                        <li class="game-stat">
+                                            <p class="stat-title">Visits</p>
+                                            <p id="VisitsCount" class="rbx-lead">0</p>
+                                        </li>
+                                        <li class="game-stat">
+                                            <p class="stat-title">Created</p>
+                                            <p id="CreatedDate" class="rbx-lead">--</p>
+                                        </li>
+                                        <li class="game-stat">
+                                            <p class="stat-title">Updated</p>
+                                            <p id="UpdatedDate" class="rbx-lead">--</p>
+                                        </li>
+                                        <li class="game-stat">
+                                            <p class="stat-title">Max Players</p>
+                                            <p id="MaxPlayers" class="rbx-lead">--</p>
+                                        </li>
+                                        <li class="game-stat">
+                                            <p class="stat-title">Genre</p>
+                                            <p class="rbx-lead"><a id="GenreLink" class="rbx-link" href="#">All</a></p>
+                                        </li>
+                                        
+                                        <li class="game-stat rovloo-stat-inline" id="RovlooStatsSection" style="display:none;">
+                                            <p class="stat-title"><img src="../images/rovloo/rovloo-ico64.png" alt="" class="rovloo-mini-icon">Reviews</p>
+                                            <p id="ReviewReception" class="rbx-lead rovloo-reception">--</p>
+                                        </li>
+                                        <li class="game-stat rovloo-stat-inline rovloo-playtime-stat" id="RovlooPlaytimeSection" style="display:none;">
+                                            <p class="stat-title"><img src="../images/rovloo/playtime-indicator.png" alt="" class="rovloo-mini-icon">Your Playtime</p>
+                                            <p id="UserPlaytime" class="rbx-lead">--</p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            
+                            <div class="tab-pane" id="store">
+                                <div id="rbx-game-passes" class="container-list game-dev-store game-passes">
+                                    <div class="container-header">
+                                        <h3>Passes for this game</h3>
+                                    </div>
+                                    <ul id="rbx-passes-container" class="hlist gear-passes-container">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                            
+                            <div class="tab-pane" id="game-instances">
+                                <div id="rbx-running-games" class="container-list" data-placeid="">
+                                    <div class="container-header">
+                                        <h3>Running Games</h3>
+                                        <span id="RefreshServers" class="rbx-btn-secondary-xs btn-more">Refresh</span>
+                                    </div>
+                                    
+                                    
+                                    <div class="server-controls" style="margin-bottom: 15px; padding: 10px; background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 4px;">
+                                        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                                            <label style="display: flex; align-items: center; gap: 5px; font-size: 12px;">
+                                                <input type="checkbox" id="ExcludeFullServers" checked/>
+                                                <span>Exclude Full Servers</span>
+                                            </label>
+                                            <label style="display: flex; align-items: center; gap: 5px; font-size: 12px;">
+                                                <span>Sort:</span>
+                                                <select id="ServerSortOrder" class="input-field" style="font-size: 12px; padding: 4px 8px;">
+                                                    <option value="desc">Most Players</option>
+                                                    <option value="asc">Least Players</option>
+                                                    <option value="bestConnection">Best Connection</option>
+                                                    <option value="newest">Newest</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div id="ServersLoading" style="text-align: center; padding: 20px; display: none;">
+                                        <div class="spinner"></div>
+                                        <div id="ServerLoadingStatus" style="margin-top: 10px; color: #666; font-size: 12px;">Loading servers...</div>
+                                    </div>
+                                    
+                                    
+                                    <ul id="rbx-game-server-item-container" class="rbx-game-server-item-container">
+                                        
+                                    </ul>
+                                    
+                                    
+                                    <div id="NoServersMessage" class="no-servers-message" style="display: none; text-align: center; padding: 20px; color: #666;">
+                                        No servers are currently running.
+                                    </div>
+                                    
+                                    
+                                    <div id="ServersPagination" class="servers-pagination" style="display: none;">
+                                        <a href="#" id="PrevServersPage" class="pager previous" title="Previous Page"></a>
+                                        <span id="ServersPageInfo" class="pager-info">Page 1 of 1</span>
+                                        <a href="#" id="NextServersPage" class="pager next" title="Next Page"></a>
+                                    </div>
+                                    
+                                    <div class="rbx-running-games-footer">
+                                        <button id="LoadMoreServers" type="button" class="rbx-btn-control-xs btn-full-width hidden">Load More</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="tab-pane" id="reviews">
+                                <div id="ReviewsSection" class="reviews-tab-container">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-xs-12">
+                        <div class="container-list badge-container">
+                            <div class="container-header">
+                                <h3>Game Badges</h3>
+                            </div>
+                            <ul class="badge-list">
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-xs-12">
+                        <div id="my-recommended-games" class="container-list games-detail recommended-games-section">
+                            <div class="container-header">
+                                <h3>Recommended Games</h3>
+                            </div>
+                            <ul id="RecommendationsContainer" class="hlist game-list">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div id="PlaceLauncherStatusPanel" style="display:none;">
+        <div class="modal-dialog">
+            <div class="MadStatusStarting">
+                
+                Starting Roblox...
+            </div>
+            <div class="MadStatusSpinner">
+                
+                <img src="../images/Spinners/waiting.gif" alt="Wait" />
+            </div>
+            
+            <div class="MadStatusField">Connecting to Players...</div>
+            
+            <div class="MadStatusBackBuffer" style="display:none;"></div>
+            <div class="action-buttons">
+                <button type="button" class="btn-control-md CancelPlaceLauncherButton">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="PlaceLauncherOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 10000;"></div>
+
+    
+    <script src="../JS/navbar.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/utils/thumbnail-loader.js"></script>
+    <script src="../scripts/utils/playtime.js"></script>
+    <script src="../scripts/components/reviews.js"></script>
+    <script src="../scripts/pages/game-detail.js"></script>
+    <script>
+        // Initialize page when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get placeId from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const placeId = urlParams.get('placeId') || urlParams.get('placeid');
+            const universeId = urlParams.get('universeId') || urlParams.get('universeid');
+            
+            if (placeId) {
+                // Update data attributes
+                const tabsEl = document.getElementById('GameDetailTabs');
+                const serversEl = document.getElementById('rbx-running-games');
+                const playBtn = document.getElementById('MultiplayerVisitButton');
+                
+                if (tabsEl) tabsEl.setAttribute('data-place-id', placeId);
+                if (serversEl) serversEl.setAttribute('data-placeid', placeId);
+                if (playBtn) playBtn.setAttribute('data-placeid', placeId);
+                
+                // Initialize the game detail page
+                if (window.initGameDetailPage) {
+                    window.initGameDetailPage(placeId, universeId);
+                }
+            } else {
+                // No placeId provided - show error
+                const titleEl = document.getElementById('GameTitle');
+                const descEl = document.getElementById('GameDescription');
+                if (titleEl) titleEl.textContent = 'Game Not Found';
+                if (descEl) descEl.textContent = 'No game ID was provided. Please select a game from the games page.';
+            }
+            
+            // Setup tab navigation
+            const tabLinks = document.querySelectorAll('.rbx-tab-heading');
+            const tabContent = document.querySelector('.rbx-tab-content');
+            
+            tabLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Remove active from all tabs and panes
+                    document.querySelectorAll('.rbx-tab').forEach(function(tab) {
+                        tab.classList.remove('active');
+                    });
+                    document.querySelectorAll('.tab-pane').forEach(function(pane) {
+                        pane.classList.remove('active');
+                    });
+                    
+                    // Add active to clicked tab and target pane
+                    this.parentElement.classList.add('active');
+                    document.getElementById(targetId).classList.add('active');
+                    
+                    // Update tab content background based on active tab
+                    if (tabContent) {
+                        if (targetId === 'about') {
+                            tabContent.style.background = '#fff';
+                        } else {
+                            tabContent.style.background = 'transparent';
+                            tabContent.style.padding = '0px';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

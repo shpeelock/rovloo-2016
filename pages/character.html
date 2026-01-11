@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Customizer - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ROBLOX Corporation"/>
+
+    <link href="../images/favicon.ico" rel="icon"/>
+
+    
+    <link rel="stylesheet" href="../CSS/cssfamily.css"/>
+    <link rel="stylesheet" href="../CSS/fetch1.css"/>
+    <link rel="stylesheet" href="../CSS/fetch2.css"/>
+    <link rel="stylesheet" href="../CSS/fetch3.css"/>
+    <link rel="stylesheet" href="../CSS/fetch4.css"/>
+    <link rel="stylesheet" href="../CSS/fetch5.css"/>
+    <link rel="stylesheet" href="../CSS/fetch6.css"/>
+    <link rel="stylesheet" href="../CSS/fetch7.css"/>
+    <link rel="stylesheet" href="../CSS/fetch9.css"/>
+    <link rel="stylesheet" href="../CSS/fetch10.css"/>
+    <link rel="stylesheet" href="../CSS/fetch12.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dark-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/character.css"/>
+</head>
+<body id="rbx-body" class="light-theme" data-performance-relative-value="0.5" data-internal-page-name="Character">
+
+<div id="wrap" class="wrap no-gutter-ads">
+    
+
+    <div class="container-main">
+        <div class="content">
+            <div class="page-content character-page">
+                
+                <h1 class="content-title">Character Customizer</h1>
+
+                <div class="section-content character-customizer-container">
+                    
+                    <div class="section avatar-section">
+                        <div class="container-header">
+                            <h3>Avatar</h3>
+                        </div>
+                        
+                        <div class="profile-avatar-left">
+                            <div class="thumbnail-holder">
+                                <span class="thumbnail-span">
+                                    <img id="avatar-image" src="../images/avatar-placeholder.png" alt="Your Avatar"/>
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="avatar-footer-section">
+                            <div class="bc-badge-area">
+                                <img id="bc-badge" src="../images/Overlays/overlay_bcOnly.png" alt="Builders Club" class="bc-badge-img" style="display: none;"/>
+                            </div>
+                            <button class="rbx-btn-control-sm enable-three-dee" id="enable-3d-btn">Enable 3D</button>
+                        </div>
+                        <div class="avatar-redraw-section">
+                            <span>Something wrong with your Avatar?</span>
+                            <a href="#" id="redraw-link" class="rbx-link">Click here to re-draw it!</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="section wardrobe-section">
+                        
+                        <div class="tab-container">
+                            <div class="tab tab-active" data-tab="wardrobe">Wardrobe</div>
+                            <div class="tab" data-tab="animations">Animations</div>
+                            <div class="tab" data-tab="outfits">Outfits</div>
+                        </div>
+
+                        
+                        <div class="tab-content">
+                            
+                            <div id="wardrobe-pane" class="tab-pane active">
+                                
+                                <div class="category-links">
+                                    <a href="#" class="category-link" data-category="heads">Heads</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="faces">Faces</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link active" data-category="hats">Hats</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="tshirts">T-Shirts</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="shirts">Shirts</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="pants">Pants</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="gear">Gear</a>
+                                    <br/>
+                                    <a href="#" class="category-link" data-category="torsos">Torsos</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="larms">L Arms</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="rarms">R Arms</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="llegs">L Legs</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="rlegs">R Legs</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="category-link" data-category="packages">Packages</a>
+                                    <br/>
+                                    <a href="catalog.html" class="rbx-link">Shop</a>
+                                </div>
+
+                                
+                                <div id="wardrobe-items-container" class="items-container">
+                                    
+                                    <div id="wardrobe-loading" class="loading-container">
+                                        <div class="loading-spinner"></div>
+                                        <div class="loading-text">Loading...</div>
+                                    </div>
+
+                                    
+                                    <ul id="wardrobe-items" class="hlist item-list">
+                                        
+                                    </ul>
+
+                                    
+                                    <div id="wardrobe-empty" class="empty-container" style="display: none;">
+                                        <p>You don't have any items in this category.</p>
+                                        <a href="catalog.html" class="rbx-btn-secondary-sm">Get More</a>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="pager-holder">
+                                    <span class="pager-text">
+                                        <a href="#" id="pager-first" class="pager-link">First</a>
+                                        <a href="#" id="pager-prev" class="pager-link">Previous</a>
+                                        <span id="pager-numbers" class="pager-numbers">
+                                            <a href="#" class="pager-num active">1</a>
+                                            <a href="#" class="pager-num">2</a>
+                                            <a href="#" class="pager-num">3</a>
+                                            <a href="#" class="pager-num">4</a>
+                                            <a href="#" class="pager-num">5</a>
+                                        </span>
+                                        <a href="#" id="pager-next" class="pager-link">Next</a>
+                                        <a href="#" id="pager-last" class="pager-link">Last</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                            <div id="animations-pane" class="tab-pane" style="display: none;">
+                                
+                                <div class="category-links">
+                                    <a href="#" class="animation-category-link active" data-anim-category="walk">Walk</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="animation-category-link" data-anim-category="run">Run</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="animation-category-link" data-anim-category="jump">Jump</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="animation-category-link" data-anim-category="idle">Idle</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="animation-category-link" data-anim-category="fall">Fall</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="animation-category-link" data-anim-category="climb">Climb</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="animation-category-link" data-anim-category="swim">Swim</a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="animation-category-link" data-anim-category="emotes">Emotes</a>
+                                </div>
+
+                                <div id="animations-items-container" class="items-container">
+                                    
+                                    <div id="animations-loading" class="loading-container">
+                                        <div class="loading-spinner"></div>
+                                        <div class="loading-text">Loading animations...</div>
+                                    </div>
+
+                                    
+                                    <div id="animations-items" class="WardrobeGrid">
+                                        
+                                    </div>
+
+                                    
+                                    <div id="animations-empty" class="empty-container" style="display: none;">
+                                        <p>You don't have any animations in this category.</p>
+                                        <a href="catalog.html" class="rbx-btn-secondary-sm">Get More</a>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="pager-holder animations-pager">
+                                    <span class="pager-text">
+                                        <a href="#" id="anim-pager-first" class="pager-link">First</a>
+                                        <a href="#" id="anim-pager-prev" class="pager-link">Previous</a>
+                                        <span id="anim-pager-numbers" class="pager-numbers">
+                                            <a href="#" class="pager-num active">1</a>
+                                        </span>
+                                        <a href="#" id="anim-pager-next" class="pager-link">Next</a>
+                                        <a href="#" id="anim-pager-last" class="pager-link">Last</a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                            <div id="outfits-pane" class="tab-pane" style="display: none;">
+                                <div id="outfits-container" class="items-container">
+                                    
+                                    <div id="outfits-loading" class="loading-container">
+                                        <div class="loading-spinner"></div>
+                                        <div class="loading-text">Loading outfits...</div>
+                                    </div>
+
+                                    
+                                    <div id="outfits-list" class="WardrobeGrid">
+                                        
+                                    </div>
+
+                                    
+                                    <div id="outfits-empty" class="empty-container" style="display: none;">
+                                        <p>You don't have any saved outfits.</p>
+                                        <button class="rbx-btn-secondary-sm">Create Outfit</button>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="pager-holder outfits-pager">
+                                    <span class="pager-text">
+                                        <a href="#" id="outfit-pager-first" class="pager-link">First</a>
+                                        <a href="#" id="outfit-pager-prev" class="pager-link">Previous</a>
+                                        <span id="outfit-pager-numbers" class="pager-numbers">
+                                            <a href="#" class="pager-num active">1</a>
+                                        </span>
+                                        <a href="#" id="outfit-pager-next" class="pager-link">Next</a>
+                                        <a href="#" id="outfit-pager-last" class="pager-link">Last</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="section-content avatar-type-container">
+                    <div class="section avatar-type-section">
+                        <h2 class="section-title">Avatar Type</h2>
+                        <div class="avatar-type-content">
+                            <label class="avatar-type-option">
+                                <input type="radio" name="avatarType" id="R6Button" value="R6">
+                                <span class="avatar-type-label">R6</span>
+                            </label>
+                            <label class="avatar-type-option">
+                                <input type="radio" name="avatarType" id="R15Button" value="R15" checked>
+                                <span class="avatar-type-label">R15</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="section-content colors-wearing-container">
+                    
+                    <div class="section colors-section">
+                        <h2 class="section-title">Colors</h2>
+                        <div class="colors-content">
+                            <div class="color-instruction">
+                                Click a body part to change its color:
+                            </div>
+                            <div id="BodyPartSelector">
+                                <div class="BodyPart BP-Head" data-part="head" id="BP_Head" title="Head"></div>
+                                <div class="BodyPart BP-LeftArm" data-part="leftArm" id="BP_LeftArm" title="Left Arm"></div>
+                                <div class="BodyPart BP-Torso" data-part="torso" id="BP_Torso" title="Torso"></div>
+                                <div class="BodyPart BP-RightArm" data-part="rightArm" id="BP_RightArm" title="Right Arm"></div>
+                                <div class="BodyPart BP-LeftLeg" data-part="leftLeg" id="BP_LeftLeg" title="Left Leg"></div>
+                                <div class="BodyPart BP-RightLeg" data-part="rightLeg" id="BP_RightLeg" title="Right Leg"></div>
+                            </div>
+                            
+                            <div id="ColorPickerSection" style="display: none; text-align: center; margin-top: 15px;">
+                                <div class="PaletteHeader">Select a color:</div>
+                                <input type="color" id="ColorPickerInput" value="#F5CD30" style="width: 100px; height: 100px; border: none; cursor: pointer; padding: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="section currently-wearing-section">
+                        <h2 class="section-title">Currently Wearing</h2>
+                        <div class="currently-wearing-content">
+                            <ul id="currently-wearing-list" class="hlist item-list currently-wearing-list">
+                                
+                            </ul>
+                            <div id="currently-wearing-empty" class="empty-container" style="display: none;">
+                                <p>You're not wearing any items.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pager-holder">
+                            <span class="pager-text">
+                                <a href="#" id="wearing-pager-first" class="pager-link">First</a>
+                                <a href="#" id="wearing-pager-prev" class="pager-link">Previous</a>
+                                <span id="wearing-pager-numbers" class="pager-numbers">
+                                    <a href="#" class="pager-num active">1</a>
+                                </span>
+                                <a href="#" id="wearing-pager-next" class="pager-link">Next</a>
+                                <a href="#" id="wearing-pager-last" class="pager-link">Last</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../JS/navbar.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/utils/thumbnail-loader.js"></script>
+<script src="../scripts/pages/character.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.initCharacterPage) {
+            window.initCharacterPage();
+        }
+    });
+</script>
+</body>
+</html>
+

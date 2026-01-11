@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ROBLOX Corporation"/>
+
+    <link href="../images/favicon.ico" rel="icon"/>
+
+    
+    <link rel="stylesheet" href="../CSS/cssfamily.css"/>
+    <link rel="stylesheet" href="../CSS/fetch1.css"/>
+    <link rel="stylesheet" href="../CSS/fetch2.css"/>
+    <link rel="stylesheet" href="../CSS/fetch3.css"/>
+    <link rel="stylesheet" href="../CSS/fetch4.css"/>
+    <link rel="stylesheet" href="../CSS/fetch5.css"/>
+    <link rel="stylesheet" href="../CSS/fetch10.css"/>
+    <link rel="stylesheet" href="../CSS/fetch11.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dark-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/inventory-overrides.css"/>
+</head>
+<body id="rbx-body" class="light-theme" data-performance-relative-value="0.5" data-internal-page-name="Inventory">
+
+<div id="wrap" class="wrap no-gutter-ads">
+    
+
+    <div class="container-main">
+        <div class="content">
+            
+            <div id="state-properties" 
+                 data-userid="" 
+                 data-loggedinuserid=""
+                 data-username=""
+                 data-headsid="17"
+                 data-facesid="18"
+                 data-gearid="19"
+                 data-hatsid="8"
+                 data-t-shirtsid="2"
+                 data-shirtsid="11"
+                 data-pantsid="12"
+                 data-decalsid="13"
+                 data-modelsid="10"
+                 data-pluginsid="38"
+                 data-animationsid="24"
+                 data-placesid="9"
+                 data-game-passesid="34"
+                 data-audioid="3"
+                 data-badgesid="21"
+                 data-packagesid="32"
+                 data-isuser="false"
+                 data-absolute-library-url="/develop/library"
+                 data-absolute-catalog-url="/catalog">
+            </div>
+
+            <div class="row page-content">
+                <h1 id="inventory-title">Inventory</h1>
+                
+                <div class="col-xs-12 rbx-tabs-vertical inventory-main-content">
+                    
+                    <div class="category-dropdown">
+                        <h3 class="h3">Category</h3>
+                        <div class="input-group-btn rbx-input-group-btn">
+                            <button type="button" id="category-dropdown-btn" class="rbx-input-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+                                <span id="dropdown-label" class="rbx-selection-label">Hats</span>
+                                <span class="rbx-icon-down-16x16"></span>
+                            </button>
+                            <ul id="category-dropdown-menu" class="rbx-dropdown-menu" role="menu" style="display: none;">
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <ul id="inventory-tabs" class="nav nav-tabs nav-stacked">
+                        <h3 class="h3">Category</h3>
+                        
+                    </ul>
+
+                    
+                    <div class="tab-content rbx-tab-content">
+                        <div class="current-items">
+                            
+                            <div class="container-header">
+                                <div class="inventory-title">
+                                    <h3 id="category-title">Hats</h3>
+                                    <span id="results-info" class="rbx-font-sm">Showing 0 results</span>
+                                </div>
+                                <div id="header-content" class="header-content">
+                                    <a id="get-more-btn" class="btn btn-more rbx-btn-primary-sm" href="catalog.html">Get More</a>
+                                    <div class="rbx-font-sm get-more">Explore the <span id="section-name">Catalog</span> to find more <span id="category-name-hint">Hats</span>!</div>
+                                </div>
+                            </div>
+
+                            
+                            <div id="inventory-loading" class="inventory-items" style="display: none;">
+                                <div class="section" style="text-align: center; padding: 40px;">
+                                    <div class="loading-spinner"></div>
+                                    <div style="margin-top: 10px;">Loading...</div>
+                                </div>
+                            </div>
+
+                            
+                            <div id="inventory-empty" class="inventory-items" style="display: none;">
+                                <div class="section">
+                                    <span class="rbx-text-danger">
+                                        <span id="empty-user-text">This user has</span> no <span id="empty-category-name">items</span>. 
+                                        <span id="empty-catalog-hint">Try using the <a id="empty-catalog-link" class="rbx-link" href="catalog.html">Catalog</a> to find new items.</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                            <ul id="inventory-items" class="hlist inventory-items"></ul>
+
+                            
+                            <div class="pager-holder">
+                                <ul id="pager" class="pager rbx-pager" style="display: none;">
+                                    <li class="rbx-pager-prev">
+                                        <a id="prev-page-btn"><i class="rbx-icon-left"></i></a>
+                                    </li>
+                                    <li>
+                                        <span>Page</span>
+                                    </li>
+                                    <li class="rbx-pager-cur">
+                                        <input type="text" id="page-input" value="1">
+                                    </li>
+                                    <li class="rbx-pager-total">
+                                        <span>of</span>
+                                        <span id="total-pages">1</span>
+                                    </li>
+                                    <li class="rbx-pager-next">
+                                        <a id="next-page-btn"><i class="rbx-icon-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                        <div id="recommendations-section" class="current-items" style="display: none;">
+                            <div class="recommendations-container">
+                                <div class="container-header recommendations-header">
+                                    <h3>Recommended <span id="recommended-category-name">Items</span></h3>
+                                </div>
+                                <ul id="recommended-items" class="hlist recommended-items"></ul>
+                                <a id="see-all-btn" class="btn rbx-btn-control-xs inventory-join-btn" href="catalog.html">See All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../JS/navbar.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/utils/thumbnail-loader.js"></script>
+<script src="../scripts/pages/inventory.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        const category = urlParams.get('category') || 'hats';
+        
+        if (window.initInventoryPage) {
+            window.initInventoryPage(userId, category);
+        }
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ROBLOX Corporation"/>
+
+    <link href="../images/favicon.ico" rel="icon"/>
+
+    
+    <link rel="stylesheet" href="../CSS/cssfamily.css"/>
+    <link rel="stylesheet" href="../CSS/fetch1.css"/>
+    <link rel="stylesheet" href="../CSS/fetch2.css"/>
+    <link rel="stylesheet" href="../CSS/fetch3.css"/>
+    <link rel="stylesheet" href="../CSS/fetch4.css"/>
+    <link rel="stylesheet" href="../CSS/fetch5.css"/>
+    <link rel="stylesheet" href="../CSS/fetch9.css"/>
+    <link rel="stylesheet" href="../CSS/fetch10.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dark-theme.css"/>
+</head>
+<body id="rbx-body" class="light-theme" data-performance-relative-value="0.5" data-internal-page-name="Profile">
+
+<div id="wrap" class="wrap no-gutter-ads">
+    
+
+    <div class="container-main">
+        <div class="content">
+            <div class="profile-container">
+                
+                <div class="section profile-header">
+                    <div class="profile-avatar-image">
+                        <span class="avatar-image-link">
+                            <img id="profile-avatar" class="profile-avatar-thumb" src="../images/avatar-placeholder.png" alt="User Avatar"/>
+                        </span>
+                        <span id="profile-avatar-status" class="profile-avatar-status"></span>
+                    </div>
+                    <div class="profile-header-content">
+                        <div class="header-title">
+                            <h1 id="profile-username">Loading...</h1>
+                            <span id="profile-badge" class="profile-badge" style="display: none;"></span>
+                        </div>
+                        <div class="header-userstatus">
+                            <div class="header-userstatus-text">
+                                <span id="profile-status"></span>
+                            </div>
+                        </div>
+                        <div class="header-details">
+                            <ul class="details-info">
+                                <li>
+                                    <div>Friends</div>
+                                    <div class="rbx-lead">
+                                        <a id="friends-count" class="rbx-link" href="#">0</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Followers</div>
+                                    <div class="rbx-lead">
+                                        <a id="followers-count" class="rbx-link" href="#">0</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Following</div>
+                                    <div class="rbx-lead">
+                                        <a id="following-count" class="rbx-link" href="#">0</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul id="profile-actions" class="details-actions">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="rbx-tabs-horizontal">
+                    <ul id="profile-tabs" class="nav nav-tabs" role="tablist">
+                        <li class="rbx-tab active" data-tab="about">
+                            <a class="rbx-tab-heading">
+                                <span class="rbx-lead">About</span>
+                            </a>
+                        </li>
+                        <li class="rbx-tab" data-tab="creations">
+                            <a class="rbx-tab-heading">
+                                <span class="rbx-lead">Creations</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content rbx-tab-content">
+                        
+                        <div id="tab-about" class="tab-pane active">
+                            
+                            <div class="section profile-about">
+                                <div class="container-header">
+                                    <h3>About</h3>
+                                </div>
+                                <div class="profile-about-content">
+                                    <div id="profile-description-container" class="description-container collapsed">
+                                        <p id="profile-description" class="profile-about-content-text">No description available.</p>
+                                    </div>
+                                    <button id="description-toggle" class="description-toggle" style="display: none;">See More</button>
+                                </div>
+                            </div>
+
+                            
+                            <div class="container-list profile-avatar">
+                                <h3>CURRENTLY WEARING</h3>
+                                <div class="col-sm-6 profile-avatar-left">
+                                    <div id="UserAvatar" class="thumbnail-holder" style="width:300px; height:300px;">
+                                        <span class="thumbnail-span">
+                                            <img id="wearing-avatar-image" alt="Avatar" src="../images/avatar-placeholder.png"/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 profile-avatar-right">
+                                    <div class="profile-avatar-mask">
+                                        <div class="profile-accoutrements-container">
+                                            <div id="accoutrements-slider" class="profile-accoutrements-slider">
+                                                <ul class="accoutrement-items-container">
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div id="accoutrements-page" class="profile-accoutrements-page-container">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="section profile-badges">
+                                <div class="container-header">
+                                    <h3>Roblox Badges <span id="roblox-badges-count" class="ng-binding"></span></h3>
+                                    <button id="roblox-badges-see-more" class="rbx-btn-secondary-xs btn-more ng-binding" style="display: none;">See More</button>
+                                </div>
+                                <div id="roblox-badges-container" class="badge-list">
+                                    <div class="loading-spinner"></div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="section profile-player-badges">
+                                <div class="container-header">
+                                    <h3>Player Badges</h3>
+                                    <span id="player-badges-count" class="assets-count"></span>
+                                    <a id="player-badges-see-all" class="rbx-btn-secondary-xs btn-more" href="#">See All</a>
+                                </div>
+                                <div id="player-badges-container" class="badge-list">
+                                    <div class="loading-spinner"></div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="section profile-friends">
+                                <div class="container-header">
+                                    <h3>Friends</h3>
+                                    <span id="friends-section-count" class="assets-count"></span>
+                                    <a id="friends-see-all" class="rbx-btn-secondary-xs btn-more" href="#">See All</a>
+                                </div>
+                                <div id="friends-list-container" class="friend-list">
+                                    <div class="loading-spinner"></div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="section profile-collections">
+                                <div class="container-header">
+                                    <h3>Collections</h3>
+                                    <div class="collection-btns">
+                                        <a id="collections-inventory-link" class="rbx-btn-secondary-xs btn-more inventory-link" href="#">Inventory</a>
+                                    </div>
+                                </div>
+                                <ul id="collections-list" class="hlist collections-list item-list">
+                                    <li class="loading-spinner"></li>
+                                </ul>
+                            </div>
+
+                            
+                            <div class="container-list profile-groups-section">
+                                <div class="group-header">
+                                    <h3>GROUPS</h3>
+                                    <div class="container-buttons">
+                                        <button id="groups-slideshow-btn" class="profile-view-selector rbx-btn-secondary-xs" title="Slideshow View" type="button">
+                                            <span class="rbx-icon-slideshow selected"></span>
+                                        </button>
+                                        <button id="groups-grid-btn" class="profile-view-selector rbx-btn-control-xs" title="Grid View" type="button">
+                                            <span class="rbx-icon-grid"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="profile-slide-container">
+                                    
+                                    <div id="groups-grid-view" class="groups-grid-view" style="display: none;">
+                                        <ul id="groups-grid-list" class="hlist group-list"></ul>
+                                        <a id="groups-load-more" class="btn rbx-btn-control-xs load-more-button" style="display: none;">Load More</a>
+                                    </div>
+                                    
+                                    <div id="groups-switcher" class="rbx-switcher slide-switcher groups">
+                                        <ul class="slide-items-container rbx-switcher-items hlist">
+                                            
+                                        </ul>
+                                        <a class="rbx-switcher-control left" data-switch="prev">
+                                            <span class="glyphicon glyphicon-chevron-left rbx-icon-carousel-left"></span>
+                                        </a>
+                                        <a class="rbx-switcher-control right" data-switch="next">
+                                            <span class="glyphicon glyphicon-chevron-right rbx-icon-carousel-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div id="tab-creations" class="tab-pane" style="display: none;">
+                            
+                            <div class="profile-game ng-scope" ng-controller="profileGridController" ng-init="init('game-list','game-container')">
+                                <div class="container-header">
+                                    <h3>Games</h3>
+                                    <span id="games-count" class="assets-count"></span>
+                                </div>
+                                <div ng-show="isGridOn" class="game-grid ng-hide"></div>
+                                <div id="games-switcher" class="rbx-switcher slide-switcher games ng-isolate-scope" ng-hide="isGridOn">
+                                    <ul class="slide-items-container rbx-switcher-items hlist">
+                                        
+                                        <li class="loading-slide" style="padding: 40px; text-align: center;">
+                                            <div class="loading-spinner"></div>
+                                        </li>
+                                    </ul>
+                                    <a class="rbx-switcher-control left" data-switch="prev">
+                                        <span class="glyphicon glyphicon-chevron-left rbx-icon-carousel-left"></span>
+                                    </a>
+                                    <a class="rbx-switcher-control right" data-switch="next">
+                                        <span class="glyphicon glyphicon-chevron-right rbx-icon-carousel-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="section profile-statistics">
+                    <h3>STATISTICS</h3>
+                    <ul class="profile-stats-container">
+                        <li class="profile-stat">
+                            <p class="stat-title">Join Date</p>
+                            <p id="stat-join-date" class="rbx-lead">-</p>
+                        </li>
+                        <li class="profile-stat">
+                            <p class="stat-title">Place Visits</p>
+                            <p id="stat-place-visits" class="rbx-lead">0</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../JS/navbar.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/utils/thumbnail-loader.js"></script>
+<script src="../scripts/pages/profile.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        
+        if (window.initProfilePage) {
+            window.initProfilePage(userId);
+        }
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friends - ROBLOX</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ROBLOX Corporation"/>
+
+    <link href="../images/favicon.ico" rel="icon"/>
+
+    
+    <link rel="stylesheet" href="../CSS/cssfamily.css"/>
+    <link rel="stylesheet" href="../CSS/fetch1.css"/>
+    <link rel="stylesheet" href="../CSS/fetch2.css"/>
+    <link rel="stylesheet" href="../CSS/fetch3.css"/>
+    <link rel="stylesheet" href="../CSS/fetch4.css"/>
+    <link rel="stylesheet" href="../CSS/fetch5.css"/>
+    <link rel="stylesheet" href="../CSS/fetch8.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/titlebar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/overrides.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dark-theme.css"/>
+</head>
+<body id="rbx-body" class="light-theme" data-performance-relative-value="0.5" data-internal-page-name="Friends">
+
+<form name="aspnetForm" method="post" action="#" id="aspnetForm" class="nav-container no-gutter-ads">
+    
+
+    <div id="navContent" class="nav-content">
+        <div class="nav-content-inner">
+            <div id="MasterContainer">
+                <div id="BodyWrapper">
+                    <div id="RepositionBody">
+                        <div id="Body">
+                            <div class="content">
+                                
+                                <div id="state-properties" 
+                                     data-userid="" 
+                                     data-loggedinuserid="" 
+                                     data-username="">
+                                </div>
+
+                                <div class="row page-content">
+                                    <h1 id="friends-title" class="friends-title">My Friends</h1>
+                                    
+                                    <div class="rbx-tabs-horizontal">
+                                        <ul id="horizontal-tabs" class="nav nav-tabs" role="tablist">
+                                            <li id="tab-friends" class="rbx-tab active" data-tab="friends">
+                                                <a class="rbx-tab-heading">
+                                                    <span class="rbx-lead">Friends</span>
+                                                </a>
+                                            </li>
+                                            <li id="tab-following" class="rbx-tab" data-tab="following">
+                                                <a class="rbx-tab-heading">
+                                                    <span class="rbx-lead">Following</span>
+                                                </a>
+                                            </li>
+                                            <li id="tab-followers" class="rbx-tab" data-tab="followers">
+                                                <a class="rbx-tab-heading">
+                                                    <span class="rbx-lead">Followers</span>
+                                                </a>
+                                            </li>
+                                            <li id="tab-requests" class="rbx-tab" data-tab="requests" style="display: none;">
+                                                <a class="rbx-tab-heading">
+                                                    <span class="rbx-lead">Requests</span>
+                                                    <span id="requests-count" class="badge" style="display: none;"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="friends-content">
+                                            <div class="friends-header">
+                                                <div id="friends-subtitle" class="friends-subtitle">Friends (0)</div>
+                                                <button id="ignore-all-btn" type="button" class="rbx-btn-control-xs ignore-button" style="display: none;">Ignore All</button>
+                                                <span class="rbx-tooltip" id="tooltip-container" style="display: none;">
+                                                    <span class="rbx-icon-moreinfo"></span>
+                                                </span>
+                                            </div>
+
+                                            <div class="tab-content rbx-tab-content">
+                                                
+                                                <div id="friends-loading" class="friends-loading">
+                                                    <div class="loading-spinner"></div>
+                                                    <div class="loading-text">Loading...</div>
+                                                </div>
+
+                                                
+                                                <div id="friends-container" class="friends-list"></div>
+
+                                                
+                                                <div id="friends-empty" class="friends-empty" style="display: none;">
+                                                    <p id="empty-message">No friends to display.</p>
+                                                </div>
+
+                                                
+                                                <div id="friends-error" class="friends-error" style="display: none;">
+                                                    <p id="error-message">Failed to load friends.</p>
+                                                    <button type="button" class="rbx-btn-control-xs" id="retry-btn">Retry</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="pager-holder">
+                                            <ul id="pager" class="pager rbx-pager" style="display: none;">
+                                                <li class="rbx-pager-prev">
+                                                    <a id="prev-page-btn"><i class="rbx-icon-left"></i></a>
+                                                </li>
+                                                <li>
+                                                    <span>Page</span>
+                                                </li>
+                                                <li class="rbx-pager-cur">
+                                                    <input type="text" id="page-input" value="1">
+                                                </li>
+                                                <li class="rbx-pager-total">
+                                                    <span class="fixed-spacing">of</span>
+                                                    <span id="total-pages">1</span>
+                                                </li>
+                                                <li class="rbx-pager-next">
+                                                    <a id="next-page-btn"><i class="rbx-icon-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script src="../JS/navbar.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/utils/thumbnail-loader.js"></script>
+<script src="../scripts/pages/friends.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        const tab = urlParams.get('tab') || 'friends';
+        
+        if (window.initFriendsPage) {
+            window.initFriendsPage(userId, tab);
+        }
+    });
+</script>
+</body>
+</html>
+
