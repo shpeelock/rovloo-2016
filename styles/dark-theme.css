@@ -5,6 +5,53 @@
     background: #222224 url('../images/obc-repeating.jpg') repeat-x top center !important;
 }
 
+.dark-theme .content {
+    background: transparent;
+}
+
+.dark-theme .recommended-games-section .container-header h3 {
+    color: white;
+}
+
+.dark-theme .reviews-page-header h1 {
+    color: white;
+}
+
+.dark-theme .reviews-page-header .subtitle {
+    color: white;
+}
+
+.dark-theme .container-list h3 {
+    color: white;
+}
+
+.dark-theme .profile-groups-section .group-header h3 {
+    color: white;
+}
+
+.dark-theme .profile-container .profile-game {
+    color: white;
+}
+
+.dark-theme[data-internal-page-name="Inventory"] h1 {
+    color: white;
+}
+
+.dark-theme .container-header .header-content .get-more {
+    color: white;
+}
+
+.dark-theme .container-header .inventory-title h3 {
+    color: white;
+}
+
+.dark-theme #settings-title {
+    color: white;
+}
+
+.dark-theme .settings-content-panel .container-header h3 {
+    color: white;
+}
 
 .dark-theme .home-container-wrapper {
     background: #F2F2F2;
