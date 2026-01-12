@@ -503,6 +503,11 @@ div#catalog .remaining-count {
     font-size: 10px;
     color: #cc0000;
     margin-top: 2px;
+    display: none;
+}
+
+div#catalog .CatalogItemInner:hover .remaining-count {
+    display: block;
 }
 
 

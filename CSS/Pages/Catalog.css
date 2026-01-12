@@ -246,6 +246,10 @@ div#catalog .CatalogItemInner span.Remaining {
     font-size: 12px;
     color: red;
     font-weight: bold;
+    display: none;
+}
+div#catalog .CatalogItemInner:hover span.Remaining {
+    display: inline;
 }
 div#catalog .catalog-item span.title {
     color: #ccc;
